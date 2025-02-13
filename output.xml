@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2025-02-10T14:55:06.285733" rpa="false" schemaversion="5">
+<suite id="s1" name="Shop project" source="D:\Shop_project">
+<suite id="s1-s1" name="Tests" source="D:\Shop_project\tests">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="User ${USER} Opens The Browser" owner="ShopLibrary" source_name="User ${USER} Opens The Browser">
+<msg time="2025-02-10T14:55:07.316488" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" start="2025-02-10T14:55:07.316488" elapsed="5.983306"/>
+</kw>
+<kw name="User ${USER} Navigates To The Url" owner="ShopLibrary" source_name="User ${USER} Navigates To The Url">
+<msg time="2025-02-10T14:55:13.301302" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<msg time="2025-02-10T14:55:57.081186" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<status status="PASS" start="2025-02-10T14:55:13.301302" elapsed="44.449840"/>
+</kw>
+<kw name="User ${USER} Logs In To The Shop" owner="ShopLibrary" source_name="User ${USER} Logs In To The Shop">
+<msg time="2025-02-10T14:55:57.823751" level="INFO">Typing text 'chandrakant.waingankar@icewarp.co.in' into text field 'id:email'.</msg>
+<msg time="2025-02-10T14:55:58.175062" level="INFO">Typing text 'MIGA_2024' into text field 'id:password'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[contains(text(),'Sign In')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:55:58.387578" elapsed="0.020846"/>
+</kw>
+<msg time="2025-02-10T14:55:58.408424" level="INFO">Clicking element '//button[contains(text(),'Sign In')]'.</msg>
+<status status="PASS" start="2025-02-10T14:55:57.752137" elapsed="2.804193"/>
+</kw>
+<kw name="User ${USER} Verifies Homepage" owner="ShopLibrary" source_name="User ${USER} Verifies Homepage">
+<msg time="2025-02-10T14:56:00.589088" level="INFO">Element '//header[@class='staging-environment']' is displayed.</msg>
+<msg time="2025-02-10T14:56:00.617396" level="INFO">Element 'css:button.sidebar-expand' is displayed.</msg>
+<msg time="2025-02-10T14:56:00.644224" level="INFO">Element 'css:button.btn.create-new-item-btn' is displayed.</msg>
+<msg time="2025-02-10T14:56:00.681598" level="INFO">Element 'css:div.header-logo' is displayed.</msg>
+<msg time="2025-02-10T14:56:00.728396" level="INFO">Element 'css:span.user-button' is displayed.</msg>
+<msg time="2025-02-10T14:56:00.780937" level="INFO">Element 'css:div.k-portlet' is displayed.</msg>
+<status status="PASS" start="2025-02-10T14:56:00.557332" elapsed="0.223605"/>
+</kw>
+<arg>User ${USER} Opens The Browser</arg>
+<arg>AND</arg>
+<arg>User ${USER} Navigates To The Url</arg>
+<arg>AND</arg>
+<arg>User ${USER} Logs In To The Shop</arg>
+<arg>AND</arg>
+<arg>User ${USER} Verifies Homepage</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-02-10T14:55:07.316488" elapsed="53.464449"/>
+</kw>
+<suite id="s1-s1-s1" name="Test1" source="D:\Shop_project\tests\Test1.robot">
+<test id="s1-s1-s1-t1" name="TC-01 Create New Cloud Quote" line="6">
+<kw name="User ${USER} Creates A New cloud Quote" owner="ShopLibrary" source_name="User ${USER} Creates A New ${option} Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:00.864522" elapsed="0.042060"/>
+</kw>
+<msg time="2025-02-10T14:56:00.906582" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='Cloud']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:01.104469" elapsed="0.022388"/>
+</kw>
+<msg time="2025-02-10T14:56:01.126857" level="INFO">Clicking element '//h3[text()='Cloud']/following-sibling::a'.</msg>
+<msg time="2025-02-10T14:56:11.701608" level="INFO">Verifying element '//h1' contains exact text 'Create a Cloud Quote'.</msg>
+<status status="PASS" start="2025-02-10T14:56:00.792937" elapsed="10.936707"/>
+</kw>
+<kw name="User ${USER} Selects Subscription: pre-paid" owner="ShopLibrary" source_name="User ${USER} Selects Subscription: ${subscription}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[contains(@for, 'pre_paid')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:11.767867" elapsed="0.014550"/>
+</kw>
+<msg time="2025-02-10T14:56:11.782417" level="INFO">Clicking element '//label[contains(@for, 'pre_paid')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:11.730721" elapsed="0.166321"/>
+</kw>
+<kw name="User ${USER} Selects Pre-paid Tenure: 14 Months (12 &lt;= Tenure &lt;= 36)" owner="ShopLibrary" source_name="User ${USER} Selects Pre-paid Tenure: ${tenure} Months (12 &lt;= Tenure &lt;= 36)">
+<msg time="2025-02-10T14:56:11.899772" level="INFO">Executing JavaScript:
+
+                                    let slider = document.getElementById('myRange');
+                                    slider.value = 14;
+                                    slider.dispatchEvent(new Event('input'));
+                                
+Without any arguments.</msg>
+<status status="PASS" start="2025-02-10T14:56:11.897577" elapsed="0.019340"/>
+</kw>
+<kw name="User ${USER} selects data center city: Mumbai" owner="ShopLibrary" source_name="User ${USER} Selects Data Center City: ${data Center City}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button[data-id='cloud-datacenter']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:11.959946" elapsed="0.021200"/>
+</kw>
+<msg time="2025-02-10T14:56:11.981146" level="INFO">Clicking element 'css:button[data-id='cloud-datacenter']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(.,'Mumbai')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:12.103561" elapsed="0.018973"/>
+</kw>
+<msg time="2025-02-10T14:56:12.122534" level="INFO">Clicking element '//a[contains(.,'Mumbai')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:11.916917" elapsed="0.268189"/>
+</kw>
+<kw name="User ${USER} Selects Plan: Business" owner="ShopLibrary" source_name="User ${USER} Selects Plan: ${plan}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button[title='Plans']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:12.225056" elapsed="0.016918"/>
+</kw>
+<msg time="2025-02-10T14:56:12.241974" level="INFO">Clicking element 'css:button[title='Plans']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(.,'Business')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:12.320985" elapsed="0.016762"/>
+</kw>
+<msg time="2025-02-10T14:56:12.337747" level="INFO">Clicking element '//a[contains(.,'Business')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:12.185106" elapsed="0.216617"/>
+</kw>
+<kw name="User ${USER} Selects Disocunt: 5 %" owner="ShopLibrary" source_name="User ${USER} Selects Disocunt: ${discount} %">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Discount ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:12.442530" elapsed="0.009687"/>
+</kw>
+<msg time="2025-02-10T14:56:12.452217" level="INFO">Clicking element '//button[text()=' Discount ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()=' Discount 5 %']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:12.767699" elapsed="0.013005"/>
+</kw>
+<msg time="2025-02-10T14:56:12.780704" level="INFO">Clicking element '//label[text()=' Discount 5 %']'.</msg>
+<status status="PASS" start="2025-02-10T14:56:12.403271" elapsed="0.446464"/>
+</kw>
+<kw name="User ${USER} Selects Free Period: 1 Month(s)" owner="ShopLibrary" source_name="User ${USER} Selects Free Period: ${free Period} Month(s)">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Free period ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:12.895377" elapsed="0.022768"/>
+</kw>
+<msg time="2025-02-10T14:56:12.919501" level="INFO">Clicking element '//button[text()=' Free period ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='1 month FREE']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:13.244100" elapsed="0.021653"/>
+</kw>
+<msg time="2025-02-10T14:56:13.265753" level="INFO">Clicking element '//label[text()='1 month FREE']'.</msg>
+<status status="PASS" start="2025-02-10T14:56:12.849735" elapsed="0.482796"/>
+</kw>
+<kw name="User ${USER} Selects Expiry As Today" owner="ShopLibrary" source_name="User ${USER} Selects Expiry As Today">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:#expirationDate</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:13.381678" elapsed="0.025704"/>
+</kw>
+<msg time="2025-02-10T14:56:13.407382" level="INFO">Clicking element 'css:#expirationDate'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:.today.day</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:13.526862" elapsed="0.025417"/>
+</kw>
+<msg time="2025-02-10T14:56:13.553063" level="INFO">Clicking element 'css:.today.day'.</msg>
+<status status="PASS" start="2025-02-10T14:56:13.332531" elapsed="10.326360"/>
+</kw>
+<kw name="User ${USER} Fills His Company Details" owner="ShopLibrary" source_name="User ${USER} Fills His Company Details">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:23.751403" elapsed="0.027962"/>
+</kw>
+<msg time="2025-02-10T14:56:23.779365" level="INFO">Typing text 'test1_Company' into text field '//*[@name='company']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='email']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:23.895098" elapsed="0.016340"/>
+</kw>
+<msg time="2025-02-10T14:56:23.911438" level="INFO">Typing text 'tester1@icewarp.com' into text field '//*[@name='email']'.</msg>
+<msg time="2025-02-10T14:56:24.045155" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.BFFB73758A5F616F913793D8D4A3935F.e.90")&gt;' by label India.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='first_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:24.180441" elapsed="0.030265"/>
+</kw>
+<msg time="2025-02-10T14:56:24.210706" level="INFO">Typing text 'Test1' into text field '//*[@name='first_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='last_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:24.331959" elapsed="0.030559"/>
+</kw>
+<msg time="2025-02-10T14:56:24.362518" level="INFO">Typing text 'USER1' into text field '//*[@name='last_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='phone']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:24.490321" elapsed="0.005623"/>
+</kw>
+<msg time="2025-02-10T14:56:24.495944" level="INFO">Typing text '+911234567892' into text field '//*[@name='phone']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='address']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:24.626944" elapsed="0.020838"/>
+</kw>
+<msg time="2025-02-10T14:56:24.647782" level="INFO">Typing text 'TEST_ADDRESS' into text field '//*[@name='address']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='city']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:24.843349" elapsed="0.020366"/>
+</kw>
+<msg time="2025-02-10T14:56:24.863715" level="INFO">Typing text 'TEST_CITY' into text field '//*[@name='city']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='zip']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:24.991209" elapsed="0.009811"/>
+</kw>
+<msg time="2025-02-10T14:56:25.001020" level="INFO">Typing text '123456' into text field '//*[@name='zip']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company_id']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:25.094406" elapsed="0.015004"/>
+</kw>
+<msg time="2025-02-10T14:56:25.110501" level="INFO">Typing text 'CID_3456' into text field '//*[@name='company_id']'.</msg>
+<status status="PASS" start="2025-02-10T14:56:23.658891" elapsed="1.505411"/>
+</kw>
+<kw name="User ${USER} Submits The Quote" owner="ShopLibrary" source_name="User ${USER} Submits The Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[contains(.,'Quote subscription')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:25.194602" elapsed="0.016629"/>
+</kw>
+<msg time="2025-02-10T14:56:25.211231" level="INFO">Clicking element '//button[contains(.,'Quote subscription')]'.</msg>
+<msg time="2025-02-10T14:56:27.879554" level="INFO">Verifying element 'css:div.alert-success div.alert-text' contains exact text 'Cloud Quote for "test1_Company" has been created.'.</msg>
+<status status="PASS" start="2025-02-10T14:56:25.164302" elapsed="2.728275"/>
+</kw>
+<doc>To verify that a user can create a new cloud quote successfully</doc>
+<tag>All</tag>
+<tag>Quotes</tag>
+<tag>Test1</tag>
+<status status="PASS" start="2025-02-10T14:56:00.791411" elapsed="27.101166"/>
+</test>
+<test id="s1-s1-s1-t2" name="TC-02 Create New SaaS Quote" line="22">
+<kw name="User ${USER} Creates A New SaaS Quote" owner="ShopLibrary" source_name="User ${USER} Creates A New ${option} Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:27.950462" elapsed="0.016990"/>
+</kw>
+<msg time="2025-02-10T14:56:27.967452" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='SaaS']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:28.097083" elapsed="0.025466"/>
+</kw>
+<msg time="2025-02-10T14:56:28.122549" level="INFO">Clicking element '//h3[text()='SaaS']/following-sibling::a'.</msg>
+<msg time="2025-02-10T14:56:29.614927" level="INFO">Verifying element '//h1' contains exact text 'Create a Saas Quote'.</msg>
+<status status="PASS" start="2025-02-10T14:56:27.892577" elapsed="1.755546"/>
+</kw>
+<kw name="User ${USER} Selects Currency: dollar" owner="ShopLibrary" source_name="User ${USER} Selects Currency: ${currency}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//option[contains(text(), 'USD')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:29.689798" elapsed="0.017849"/>
+</kw>
+<msg time="2025-02-10T14:56:29.707647" level="INFO">Clicking element '//option[contains(text(), 'USD')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:29.649148" elapsed="0.098573"/>
+</kw>
+<kw name="User ${USER} Selects Subscription: pre-paid" owner="ShopLibrary" source_name="User ${USER} Selects Subscription: ${subscription}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[contains(@for, 'pre_paid')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:29.790064" elapsed="0.024853"/>
+</kw>
+<msg time="2025-02-10T14:56:29.814917" level="INFO">Clicking element '//label[contains(@for, 'pre_paid')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:29.747721" elapsed="0.160080"/>
+</kw>
+<kw name="User ${USER} Selects Pre-paid Tenure: 14 Months (12 &lt;= Tenure &lt;= 36)" owner="ShopLibrary" source_name="User ${USER} Selects Pre-paid Tenure: ${tenure} Months (12 &lt;= Tenure &lt;= 36)">
+<msg time="2025-02-10T14:56:29.910523" level="INFO">Executing JavaScript:
+
+                                    let slider = document.getElementById('myRange');
+                                    slider.value = 14;
+                                    slider.dispatchEvent(new Event('input'));
+                                
+Without any arguments.</msg>
+<status status="PASS" start="2025-02-10T14:56:29.907801" elapsed="0.016721"/>
+</kw>
+<kw name="User ${USER} Selects Plan: Business" owner="ShopLibrary" source_name="User ${USER} Selects Plan: ${plan}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button[title='Plans']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:29.959232" elapsed="0.031845"/>
+</kw>
+<msg time="2025-02-10T14:56:29.991077" level="INFO">Clicking element 'css:button[title='Plans']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(.,'Business')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:30.107908" elapsed="0.024093"/>
+</kw>
+<msg time="2025-02-10T14:56:30.132001" level="INFO">Clicking element '//a[contains(.,'Business')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:29.924522" elapsed="0.308514"/>
+</kw>
+<kw name="User ${USER} Selects Disocunt: 5 %" owner="ShopLibrary" source_name="User ${USER} Selects Disocunt: ${discount} %">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Discount ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:30.257309" elapsed="0.018179"/>
+</kw>
+<msg time="2025-02-10T14:56:30.275488" level="INFO">Clicking element '//button[text()=' Discount ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()=' Discount 5 %']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:30.591317" elapsed="0.018594"/>
+</kw>
+<msg time="2025-02-10T14:56:30.609911" level="INFO">Clicking element '//label[text()=' Discount 5 %']'.</msg>
+<status status="PASS" start="2025-02-10T14:56:30.233036" elapsed="0.461973"/>
+</kw>
+<kw name="User USER Selects Trial (free Period) Period: 1 Month(s)" owner="ShopLibrary" source_name="User ${USER} Selects Trial (free Period) Period: ${free Period} Month(s)">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Trial (free period) ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:30.733737" elapsed="0.013958"/>
+</kw>
+<msg time="2025-02-10T14:56:30.747695" level="INFO">Clicking element '//button[text()=' Trial (free period) ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='1 month FREE']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:31.027323" elapsed="0.018706"/>
+</kw>
+<msg time="2025-02-10T14:56:31.046029" level="INFO">Clicking element '//label[text()='1 month FREE']'.</msg>
+<status status="PASS" start="2025-02-10T14:56:30.695009" elapsed="0.434249"/>
+</kw>
+<kw name="User ${USER} Selects Expiry As Today" owner="ShopLibrary" source_name="User ${USER} Selects Expiry As Today">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:#expirationDate</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:31.174150" elapsed="0.022782"/>
+</kw>
+<msg time="2025-02-10T14:56:31.196932" level="INFO">Clicking element 'css:#expirationDate'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:.today.day</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:31.278783" elapsed="0.013077"/>
+</kw>
+<msg time="2025-02-10T14:56:31.291860" level="INFO">Clicking element 'css:.today.day'.</msg>
+<status status="PASS" start="2025-02-10T14:56:31.129258" elapsed="10.232918"/>
+</kw>
+<kw name="User ${USER} Fills His Company Details" owner="ShopLibrary" source_name="User ${USER} Fills His Company Details">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:41.469627" elapsed="0.038061"/>
+</kw>
+<msg time="2025-02-10T14:56:41.507688" level="INFO">Typing text 'test1_Company' into text field '//*[@name='company']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='email']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:41.598512" elapsed="0.025965"/>
+</kw>
+<msg time="2025-02-10T14:56:41.624477" level="INFO">Typing text 'tester1@icewarp.com' into text field '//*[@name='email']'.</msg>
+<msg time="2025-02-10T14:56:41.733253" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.77CB6A705079C7DFD9B71C8DCC8FF830.e.349")&gt;' by label India.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='first_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:41.897836" elapsed="0.020134"/>
+</kw>
+<msg time="2025-02-10T14:56:41.917970" level="INFO">Typing text 'Test1' into text field '//*[@name='first_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='last_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.034062" elapsed="0.015070"/>
+</kw>
+<msg time="2025-02-10T14:56:42.049132" level="INFO">Typing text 'USER1' into text field '//*[@name='last_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='phone']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.172121" elapsed="0.016593"/>
+</kw>
+<msg time="2025-02-10T14:56:42.188714" level="INFO">Typing text '+911234567892' into text field '//*[@name='phone']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='address']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.316215" elapsed="0.018232"/>
+</kw>
+<msg time="2025-02-10T14:56:42.334447" level="INFO">Typing text 'TEST_ADDRESS' into text field '//*[@name='address']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='city']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.464614" elapsed="0.017214"/>
+</kw>
+<msg time="2025-02-10T14:56:42.481828" level="INFO">Typing text 'TEST_CITY' into text field '//*[@name='city']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='zip']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.635054" elapsed="0.026817"/>
+</kw>
+<msg time="2025-02-10T14:56:42.661871" level="INFO">Typing text '123456' into text field '//*[@name='zip']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company_id']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.785529" elapsed="0.018316"/>
+</kw>
+<msg time="2025-02-10T14:56:42.803845" level="INFO">Typing text 'CID_3456' into text field '//*[@name='company_id']'.</msg>
+<status status="PASS" start="2025-02-10T14:56:41.362176" elapsed="1.534147"/>
+</kw>
+<kw name="User ${USER} Submits The Quote" owner="ShopLibrary" source_name="User ${USER} Submits The Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[contains(.,'Quote subscription')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:42.930444" elapsed="0.019876"/>
+</kw>
+<msg time="2025-02-10T14:56:42.950320" level="INFO">Clicking element '//button[contains(.,'Quote subscription')]'.</msg>
+<msg time="2025-02-10T14:56:45.134512" level="INFO">Verifying element 'css:div.alert-success div.alert-text' contains exact text 'Cloud Quote for "test1_Company" has been created.'.</msg>
+<status status="PASS" start="2025-02-10T14:56:42.896714" elapsed="2.267591"/>
+</kw>
+<doc>To verify that a user can create a new SaaS quote successfully</doc>
+<tag>All</tag>
+<tag>Quotes</tag>
+<tag>Test1</tag>
+<status status="PASS" start="2025-02-10T14:56:27.892577" elapsed="17.272749"/>
+</test>
+<test id="s1-s1-s1-t3" name="TC-03 Create New Lead #1" line="37">
+<kw name="User ${USER} Creates New Lead" owner="ShopLibrary" source_name="User ${USER} Creates New Lead">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:45.197130" elapsed="0.032376"/>
+</kw>
+<msg time="2025-02-10T14:56:45.229506" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='Leads']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:45.360831" elapsed="0.030530"/>
+</kw>
+<msg time="2025-02-10T14:56:45.392895" level="INFO">Clicking element '//h3[text()='Leads']/following-sibling::a'.</msg>
+<msg time="2025-02-10T14:56:46.643646" level="INFO">Verifying element '//h1' contains exact text 'Create a Lead'.</msg>
+<status status="PASS" start="2025-02-10T14:56:45.167320" elapsed="1.496784"/>
+</kw>
+<kw name="User ${USER} Selects Assigns To radio Option As: Partner" owner="ShopLibrary" source_name="User ${USER} Selects Assigns To Radio Option As: ${option}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='Partner']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:46.691962" elapsed="0.009450"/>
+</kw>
+<msg time="2025-02-10T14:56:46.701412" level="INFO">Clicking element '//label[text()='Partner']'.</msg>
+<doc>This keyword is used to select the radio buttons regarding "Assign To" on Leads creation page
+Arguments:
+option: Direct | Partner</doc>
+<status status="PASS" start="2025-02-10T14:56:46.665119" elapsed="0.111281"/>
+</kw>
+<kw name="User ${USER} Selects Source Option As: Website" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-10T14:56:46.777537" level="INFO">Selecting options from selection list '//select[@title='Source']' by label Website.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-10T14:56:46.777537" elapsed="0.066891"/>
+</kw>
+<kw name="User ${USER} Selects Stage Option As: Open" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-10T14:56:46.848520" level="INFO">Selecting options from selection list '//select[@title='Stage']' by label Open.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-10T14:56:46.848520" elapsed="0.090439"/>
+</kw>
+<kw name="User ${USER} Selects Country Option As: India" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-10T14:56:46.940467" level="INFO">Selecting options from selection list '//select[@title='Country']' by label India.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-10T14:56:46.940467" elapsed="0.073574"/>
+</kw>
+<kw name="User ${USER} Enters Description: Give me Liberty or Give me coins" owner="ShopLibrary" source_name="User ${USER} Enters Description: ${description Text}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:textarea#description</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:47.048591" elapsed="0.011353"/>
+</kw>
+<msg time="2025-02-10T14:56:47.059944" level="INFO">Typing text 'Give me Liberty or Give me coins' into text field 'css:textarea#description'.</msg>
+<doc>This keyword is used to enter any description regarding the Lead. However it is not mandatory.</doc>
+<status status="PASS" start="2025-02-10T14:56:47.014041" elapsed="0.134460"/>
+</kw>
+<kw name="User ${USER} Selects Name On Field 1 And Enters Value As: My_Name_is_khan" owner="ShopLibrary" source_name="User ${USER} Selects ${field Option} On Field ${row Number} And Enters Value As: ${value In Textbox}">
+<msg time="2025-02-10T14:56:47.177764" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.9D738814C181CDC565BFCD36F49CC5C9.e.729")&gt;' by label Name.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.9D738814C181CDC565BFCD36F49CC5C9.e.730")&gt;</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:47.289476" elapsed="0.016448"/>
+</kw>
+<msg time="2025-02-10T14:56:47.305924" level="INFO">Typing text 'My_Name_is_khan' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.9D738814C181CDC565BFCD36F49CC5C9.e.730")&gt;'.</msg>
+<status status="PASS" start="2025-02-10T14:56:47.148501" elapsed="0.228218"/>
+</kw>
+<kw name="User ${USER} Submits The Lead Creation Form" owner="ShopLibrary" source_name="User ${USER} Submits The Lead Creation Form">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: .card-footer button</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:47.410199" elapsed="0.028808"/>
+</kw>
+<msg time="2025-02-10T14:56:47.439007" level="INFO">Clicking element 'css: .card-footer button'.</msg>
+<msg time="2025-02-10T14:56:49.341344" level="INFO">Verifying element 'css: div.alert-text' contains exact text 'Lead has been created.'.</msg>
+<status status="PASS" start="2025-02-10T14:56:47.376719" elapsed="1.987092"/>
+</kw>
+<doc>To verify that user can create a new Lead sucessfully</doc>
+<tag>All</tag>
+<tag>Leads</tag>
+<tag>Test1</tag>
+<status status="PASS" start="2025-02-10T14:56:45.166321" elapsed="4.197756"/>
+</test>
+<test id="s1-s1-s1-t4" name="TC-04 Create New Lead #2" line="49">
+<kw name="User ${USER} Creates New Lead" owner="ShopLibrary" source_name="User ${USER} Creates New Lead">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:49.389851" elapsed="0.013831"/>
+</kw>
+<msg time="2025-02-10T14:56:49.403682" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='Leads']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:49.476116" elapsed="0.016393"/>
+</kw>
+<msg time="2025-02-10T14:56:49.492509" level="INFO">Clicking element '//h3[text()='Leads']/following-sibling::a'.</msg>
+<msg time="2025-02-10T14:56:50.259784" level="INFO">Verifying element '//h1' contains exact text 'Create a Lead'.</msg>
+<status status="PASS" start="2025-02-10T14:56:49.365107" elapsed="0.917826"/>
+</kw>
+<kw name="User ${USER} Selects Assigns To radio Option As: Partner" owner="ShopLibrary" source_name="User ${USER} Selects Assigns To Radio Option As: ${option}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='Partner']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:50.311216" elapsed="0.021312"/>
+</kw>
+<msg time="2025-02-10T14:56:50.332528" level="INFO">Clicking element '//label[text()='Partner']'.</msg>
+<doc>This keyword is used to select the radio buttons regarding "Assign To" on Leads creation page
+Arguments:
+option: Direct | Partner</doc>
+<status status="PASS" start="2025-02-10T14:56:50.282933" elapsed="0.114969"/>
+</kw>
+<kw name="User ${USER} Selects Source Option As: Website" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-10T14:56:50.398944" level="INFO">Selecting options from selection list '//select[@title='Source']' by label Website.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-10T14:56:50.398944" elapsed="0.106509"/>
+</kw>
+<kw name="User ${USER} Selects Stage Option As: Open" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-10T14:56:50.507633" level="INFO">Selecting options from selection list '//select[@title='Stage']' by label Open.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-10T14:56:50.507633" elapsed="0.084710"/>
+</kw>
+<kw name="User ${USER} Selects Country Option As: India" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-10T14:56:50.593356" level="INFO">Selecting options from selection list '//select[@title='Country']' by label India.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-10T14:56:50.592343" elapsed="0.104731"/>
+</kw>
+<kw name="User ${USER} Enters Description: Give me Liberty or Give me coins" owner="ShopLibrary" source_name="User ${USER} Enters Description: ${description Text}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:textarea#description</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:50.738710" elapsed="0.025082"/>
+</kw>
+<msg time="2025-02-10T14:56:50.763792" level="INFO">Typing text 'Give me Liberty or Give me coins' into text field 'css:textarea#description'.</msg>
+<doc>This keyword is used to enter any description regarding the Lead. However it is not mandatory.</doc>
+<status status="PASS" start="2025-02-10T14:56:50.697074" elapsed="0.176319"/>
+</kw>
+<kw name="User ${USER} Selects Name On Field 1 And Enters Value As: My_Name_is_khan" owner="ShopLibrary" source_name="User ${USER} Selects ${field Option} On Field ${row Number} And Enters Value As: ${value In Textbox}">
+<msg time="2025-02-10T14:56:50.897575" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.A4CA7C85F938A415C83E403704E7E66E.e.893")&gt;' by label Name.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.A4CA7C85F938A415C83E403704E7E66E.e.894")&gt;</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:50.974131" elapsed="0.000000"/>
+</kw>
+<msg time="2025-02-10T14:56:50.974131" level="INFO">Typing text 'My_Name_is_khan' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.A4CA7C85F938A415C83E403704E7E66E.e.894")&gt;'.</msg>
+<status status="PASS" start="2025-02-10T14:56:50.873393" elapsed="0.233719"/>
+</kw>
+<kw name="User ${USER} Adds Item To User Details" owner="ShopLibrary" source_name="User ${USER} Adds Item To User Details">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: button.create-field</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:51.140232" elapsed="0.016534"/>
+</kw>
+<msg time="2025-02-10T14:56:51.156766" level="INFO">Clicking element 'css: button.create-field'.</msg>
+<status status="PASS" start="2025-02-10T14:56:51.107112" elapsed="0.105363"/>
+</kw>
+<kw name="User ${USER} Selects Company On Field 2 And Enters Value As: My_Name_is_khan_Company" owner="ShopLibrary" source_name="User ${USER} Selects ${field Option} On Field ${row Number} And Enters Value As: ${value In Textbox}">
+<msg time="2025-02-10T14:56:51.244769" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.A4CA7C85F938A415C83E403704E7E66E.e.923")&gt;' by label Company.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.A4CA7C85F938A415C83E403704E7E66E.e.928")&gt;</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:51.297891" elapsed="0.008940"/>
+</kw>
+<msg time="2025-02-10T14:56:51.306831" level="INFO">Typing text 'My_Name_is_khan_Company' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="bd8a460a398419c849a9916bb25368f2", element="f.72F2D738CBF2FE2153CE6D95ECE6EC66.d.A4CA7C85F938A415C83E403704E7E66E.e.928")&gt;'.</msg>
+<status status="PASS" start="2025-02-10T14:56:51.214482" elapsed="0.193047"/>
+</kw>
+<kw name="User ${USER} Submits The Lead Creation Form" owner="ShopLibrary" source_name="User ${USER} Submits The Lead Creation Form">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: .card-footer button</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:51.461767" elapsed="0.013397"/>
+</kw>
+<msg time="2025-02-10T14:56:51.475164" level="INFO">Clicking element 'css: .card-footer button'.</msg>
+<msg time="2025-02-10T14:56:53.412076" level="INFO">Verifying element 'css: div.alert-text' contains exact text 'Lead has been created.'.</msg>
+<status status="PASS" start="2025-02-10T14:56:51.407529" elapsed="2.026107"/>
+</kw>
+<doc>To verify that user can create a new Lead sucessfully</doc>
+<tag>All</tag>
+<tag>Leads</tag>
+<tag>Test1</tag>
+<status status="PASS" start="2025-02-10T14:56:49.365107" elapsed="4.069524"/>
+</test>
+<test id="s1-s1-s1-t5" name="TC-05 Open Royalties page from leftmenu" line="65">
+<kw name="User ${USER} Opens Royalties Page From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens ${page Name} Page From Left Menu">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.sidebar-expand</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:53.464664" elapsed="0.007987"/>
+</kw>
+<msg time="2025-02-10T14:56:53.472651" level="INFO">Clicking element 'css:button.sidebar-expand'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Royalties')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:56:53.591862" elapsed="0.017158"/>
+</kw>
+<msg time="2025-02-10T14:56:53.609020" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Royalties')]'.</msg>
+<status status="PASS" start="2025-02-10T14:56:53.436601" elapsed="0.996682"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-10T14:56:54.433283" level="INFO">Page is opened succesfully</msg>
+<arg>Page is opened succesfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-10T14:56:54.433283" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-10T14:57:04.433657" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-10T14:56:54.433283" elapsed="10.000374"/>
+</kw>
+<doc>To verify that user is able to open Royalties page from left menu</doc>
+<tag>All</tag>
+<tag>pages</tag>
+<tag>Test1</tag>
+<status status="PASS" start="2025-02-10T14:56:53.435598" elapsed="10.998059"/>
+</test>
+<test id="s1-s1-s1-t6" name="TC-06 Open new Lead Page from leftmenu" line="72">
+<kw name="User ${USER} Opens Page New Under Leads Dropdown From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens Page ${page Name} Under ${dropdown} Dropdown From Left Menu">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.sidebar-expand</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:57:04.479624" elapsed="0.037116"/>
+</kw>
+<msg time="2025-02-10T14:57:04.516740" level="INFO">Clicking element 'css:button.sidebar-expand'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:57:04.694780" elapsed="0.032612"/>
+</kw>
+<msg time="2025-02-10T14:57:04.727392" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]/following-sibling::ul/li/a[contains(text(),'New')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:57:05.049677" elapsed="0.025614"/>
+</kw>
+<msg time="2025-02-10T14:57:05.076005" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]/following-sibling::ul/li/a[contains(text(),'New')]'.</msg>
+<status status="PASS" start="2025-02-10T14:57:04.433657" elapsed="1.469820"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-10T14:57:05.904478" level="INFO">Page is opened successfully</msg>
+<arg>Page is opened successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-10T14:57:05.904478" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-10T14:57:15.906169" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-10T14:57:05.904478" elapsed="10.001691"/>
+</kw>
+<doc>To veirfy that user is able to open new Lead page from left menu</doc>
+<tag>All</tag>
+<tag>pages</tag>
+<tag>Test1</tag>
+<status status="PASS" start="2025-02-10T14:57:04.433657" elapsed="11.472975"/>
+</test>
+<status status="PASS" start="2025-02-10T14:56:00.780937" elapsed="75.126312"/>
+</suite>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="User ${USER} Logs Out The Shop" owner="ShopLibrary" source_name="User ${USER} Logs Out The Shop">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:span.user-button</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:57:15.984303" elapsed="0.026839"/>
+</kw>
+<msg time="2025-02-10T14:57:16.011142" level="INFO">Clicking element 'css:span.user-button'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(text(),'Sign Out')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-10T14:57:16.226522" elapsed="0.025729"/>
+</kw>
+<msg time="2025-02-10T14:57:16.252251" level="INFO">Clicking element '//a[contains(text(),'Sign Out')]'.</msg>
+<status status="PASS" start="2025-02-10T14:57:15.909290" elapsed="2.185402"/>
+</kw>
+<arg>User ${USER} Logs Out The Shop</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-02-10T14:57:15.909290" elapsed="2.185402"/>
+</kw>
+<status status="PASS" start="2025-02-10T14:55:06.410899" elapsed="131.683793"/>
+</suite>
+<status status="PASS" start="2025-02-10T14:55:06.356785" elapsed="131.740908"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">All</stat>
+<stat pass="2" fail="0" skip="0">Leads</stat>
+<stat pass="2" fail="0" skip="0">pages</stat>
+<stat pass="2" fail="0" skip="0">Quotes</stat>
+<stat pass="6" fail="0" skip="0">Test1</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Shop project">Shop project</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Tests">Shop project.Tests</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1" name="Test1">Shop project.Tests.Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

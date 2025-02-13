@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2025-01-30T12:03:34.407593" rpa="false" schemaversion="5">
+<suite id="s1" name="Shop project" source="D:\Shop_project">
+<suite id="s1-s1" name="Tests" source="D:\Shop_project\tests">
+<suite id="s1-s1-s1" name="Test1" source="D:\Shop_project\tests\Test1.robot">
+<test id="s1-s1-s1-t1" name="Test1" line="6">
+<kw name="User USER Opens The Browser" owner="ShopLibrary" source_name="User ${USER} Opens The Browser">
+<msg time="2025-01-30T12:03:36.837672" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-01-30T12:03:36.844112" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" start="2025-01-30T12:03:34.966308" elapsed="3.987074"/>
+</kw>
+<kw name="User USER Navigates To The Url" owner="ShopLibrary" source_name="User ${USER} Navigates To The Url">
+<msg time="2025-01-30T12:03:48.323709" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<msg time="2025-01-30T12:04:40.107948" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<status status="PASS" start="2025-01-30T12:03:38.953382" elapsed="61.834559"/>
+</kw>
+<kw name="User USER Logs In To The Shop" owner="ShopLibrary" source_name="User ${USER} Logs In To The Shop">
+<msg time="2025-01-30T12:04:58.020343" level="INFO">Typing text 'chandrakant.waingankar@icewarp.co.in' into text field 'id:email'.</msg>
+<msg time="2025-01-30T12:04:58.270486" level="INFO">Typing text 'MIGA_2024' into text field 'id:password'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[contains(text(),'Sign In')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-30T12:04:58.520838" elapsed="25.864062"/>
+</kw>
+<msg time="2025-01-30T12:05:24.385294" level="INFO">Clicking element '//button[contains(text(),'Sign In')]'.</msg>
+<status status="PASS" start="2025-01-30T12:04:40.787941" elapsed="45.953727"/>
+</kw>
+<kw name="User USER Verifies Homepage" owner="ShopLibrary" source_name="User ${USER} Verifies Homepage">
+<msg time="2025-01-30T12:05:34.954435" level="INFO">Element '//header[@class='staging-environment']' is displayed.</msg>
+<msg time="2025-01-30T12:05:35.008637" level="INFO">Element 'css:button.sidebar-expand' is displayed.</msg>
+<msg time="2025-01-30T12:05:35.050866" level="INFO">Element 'css:button.btn.create-new-item-btn' is displayed.</msg>
+<kw name="Save Selenium Screenshot" owner="ShopLibrary">
+<msg time="2025-01-30T12:05:41.717328" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1738218941.4843996-0.png"&gt;&lt;img src="selenium-screenshot-1738218941.4843996-0.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot with a unique filename to be stored in Robot Framework compiled reports.</doc>
+<status status="PASS" start="2025-01-30T12:05:35.077328" elapsed="6.640000"/>
+</kw>
+<msg time="2025-01-30T12:05:41.717328" level="FAIL">Element with locator 'div.header-logo' not found.</msg>
+<status status="FAIL" start="2025-01-30T12:05:26.743196" elapsed="14.993383">Element with locator 'div.header-logo' not found.</status>
+</kw>
+<doc>Test1</doc>
+<tag>Test1</tag>
+<status status="FAIL" start="2025-01-30T12:03:34.966308" elapsed="134.512545">Element with locator 'div.header-logo' not found.</status>
+</test>
+<status status="FAIL" start="2025-01-30T12:03:34.448482" elapsed="135.032383"/>
+</suite>
+<status status="FAIL" start="2025-01-30T12:03:34.448482" elapsed="135.032383"/>
+</suite>
+<status status="FAIL" start="2025-01-30T12:03:34.429577" elapsed="135.055388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Test1</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Shop project">Shop project</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Shop project.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test1">Shop project.Tests.Test1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-30T12:03:36.837672" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+</errors>
+</robot>
