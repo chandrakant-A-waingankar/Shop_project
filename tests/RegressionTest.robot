@@ -77,6 +77,45 @@ TC-06 Open new Lead Page from leftmenu
     Sleep    10s
 
 
+TC-07 Create new service order
+    [Documentation]    To verify that user is able to create new service order
+    [Tags]    serviceOrder
+    User ${USER} Opens Page New Under Services Dropdown From Left Menu
+    Sleep    2s
+    User ${USER} Selects Service Item As SSL Certificate
+    Sleep    5s
+    User ${USER} Selects Billing Country As Afghanistan
+    User ${USER} Enters certificate item name As Mycertificate
+    User ${USER} Enters certificate Item Description As This is my test certificate
+    User ${USER} Selects Discount For Item SSL Certificate As 2 %
+    User ${USER} Fills His Company Details On Service Order
+    User ${USER} Submits The Service Order
+
+TC-08 Create new User
+    [Documentation]    To verify that user is able to create new user
+    [Tags]    newuser
+    ${timestamp}    Get Unit Timestamp
+    User ${USER} Opens Page New Under Users Dropdown From Left Menu
+    User ${USER} Uploads Avatar Image test_data/cat.png
+    User ${USER} Enters name As Eric james
+    User ${USER} Enters email As Eric.james_${timestamp}@ice.com
+    User ${USER} Enters position As QA_tester
+    User ${USER} Enters password As Mail@123
+    User ${USER} Enters password_confirmation As Mail@123
+    User ${USER} Assigns The Role Admin To The New User
+    User ${USER} Assigns Permission For Clouds To Overview
+    User ${USER} Submits The New User Data
+
+
+
+
+
+
+
+
+
+
+
     
     
     

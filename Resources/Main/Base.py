@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import os
 import sys
-import time
+from time import sleep, time
 sys.path.append(os.path.abspath(''))
 
 

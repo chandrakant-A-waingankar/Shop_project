@@ -23,7 +23,8 @@
                     "--variable", "URL:https://shopstage.icewarp.com/login", 
                     "--variable", "USERNAME:chandrakant.waingankar@icewarp.co.in", 
                     "--variable", "PASSWORD:MIGA_2024", 
-                    "--include", "Test1"
+                    "--variable", "USER:Chan",
+                    "--include", "ServiceOrder"
                 ],
             "target": "."
         },

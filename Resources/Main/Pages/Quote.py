@@ -140,7 +140,6 @@ class Quote(HomePage):
             self.wait_for_and_click_element(self.submit_quote_subscription)
             self.wait_until_element_is_visible(self.quote_submitted_confirmation,timeout=10)
             self.element_text_should_be(self.quote_submitted_confirmation,"Cloud Quote for \""+self.company_data["company"]+"\" has been created.")
-            
 
         except Exception as e:
             ALerts_list = self.get_webelements(self.quote_submitted_error_alert)

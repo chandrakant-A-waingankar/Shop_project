@@ -1,8 +1,10 @@
 from Main.Pages.Quote import Quote
 from Main.Pages.LoginPage import LoginPage
 from Main.Pages.Lead import Lead
+from Main.Pages.Services import Services
+from Main.Pages.Users import Users
 
 
-class ShopLibrary(LoginPage, Quote, Lead):
+class ShopLibrary(LoginPage, Quote, Lead, Services, Users):
     def __init__(self):
         super().__init__()

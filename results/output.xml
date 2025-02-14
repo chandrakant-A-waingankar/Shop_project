@@ -1,66 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2025-01-30T12:03:34.407593" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2025-02-13T19:47:29.070269" rpa="false" schemaversion="5">
 <suite id="s1" name="Shop project" source="D:\Shop_project">
 <suite id="s1-s1" name="Tests" source="D:\Shop_project\tests">
-<suite id="s1-s1-s1" name="Test1" source="D:\Shop_project\tests\Test1.robot">
-<test id="s1-s1-s1-t1" name="Test1" line="6">
-<kw name="User USER Opens The Browser" owner="ShopLibrary" source_name="User ${USER} Opens The Browser">
-<msg time="2025-01-30T12:03:36.837672" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg time="2025-01-30T12:03:36.844112" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" start="2025-01-30T12:03:34.966308" elapsed="3.987074"/>
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="User ${USER} Opens The Browser" owner="ShopLibrary" source_name="User ${USER} Opens The Browser">
+<msg time="2025-02-13T19:47:30.338691" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" start="2025-02-13T19:47:30.335394" elapsed="5.278123"/>
 </kw>
-<kw name="User USER Navigates To The Url" owner="ShopLibrary" source_name="User ${USER} Navigates To The Url">
-<msg time="2025-01-30T12:03:48.323709" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
-<msg time="2025-01-30T12:04:40.107948" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
-<status status="PASS" start="2025-01-30T12:03:38.953382" elapsed="61.834559"/>
+<kw name="User ${USER} Navigates To The Url" owner="ShopLibrary" source_name="User ${USER} Navigates To The Url">
+<msg time="2025-02-13T19:47:35.614043" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<msg time="2025-02-13T19:48:06.201156" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<status status="PASS" start="2025-02-13T19:47:35.614043" elapsed="31.441648"/>
 </kw>
-<kw name="User USER Logs In To The Shop" owner="ShopLibrary" source_name="User ${USER} Logs In To The Shop">
-<msg time="2025-01-30T12:04:58.020343" level="INFO">Typing text 'chandrakant.waingankar@icewarp.co.in' into text field 'id:email'.</msg>
-<msg time="2025-01-30T12:04:58.270486" level="INFO">Typing text 'MIGA_2024' into text field 'id:password'.</msg>
+<kw name="User ${USER} Logs In To The Shop" owner="ShopLibrary" source_name="User ${USER} Logs In To The Shop">
+<msg time="2025-02-13T19:48:07.126970" level="INFO">Typing text 'chandrakant.waingankar@icewarp.co.in' into text field 'id:email'.</msg>
+<msg time="2025-02-13T19:48:07.374389" level="INFO">Typing text 'MIGA_2024' into text field 'id:password'.</msg>
 <kw name="Set Focus To Element" owner="ShopLibrary">
 <arg>//button[contains(text(),'Sign In')]</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-30T12:04:58.520838" elapsed="25.864062"/>
+<status status="PASS" start="2025-02-13T19:48:07.573418" elapsed="0.025401"/>
 </kw>
-<msg time="2025-01-30T12:05:24.385294" level="INFO">Clicking element '//button[contains(text(),'Sign In')]'.</msg>
-<status status="PASS" start="2025-01-30T12:04:40.787941" elapsed="45.953727"/>
+<msg time="2025-02-13T19:48:07.598819" level="INFO">Clicking element '//button[contains(text(),'Sign In')]'.</msg>
+<status status="PASS" start="2025-02-13T19:48:07.055691" elapsed="3.197399"/>
 </kw>
-<kw name="User USER Verifies Homepage" owner="ShopLibrary" source_name="User ${USER} Verifies Homepage">
-<msg time="2025-01-30T12:05:34.954435" level="INFO">Element '//header[@class='staging-environment']' is displayed.</msg>
-<msg time="2025-01-30T12:05:35.008637" level="INFO">Element 'css:button.sidebar-expand' is displayed.</msg>
-<msg time="2025-01-30T12:05:35.050866" level="INFO">Element 'css:button.btn.create-new-item-btn' is displayed.</msg>
+<kw name="User ${USER} Verifies Homepage" owner="ShopLibrary" source_name="User ${USER} Verifies Homepage">
+<msg time="2025-02-13T19:48:10.309402" level="INFO">Element '//header[@class='staging-environment']' is displayed.</msg>
+<msg time="2025-02-13T19:48:10.338060" level="INFO">Element 'css:button.sidebar-expand' is displayed.</msg>
+<msg time="2025-02-13T19:48:10.369900" level="INFO">Element 'css:button.btn.create-new-item-btn' is displayed.</msg>
+<msg time="2025-02-13T19:48:10.408477" level="INFO">Element 'css:div.header-logo' is displayed.</msg>
+<msg time="2025-02-13T19:48:10.486336" level="INFO">Element 'css:span.user-button' is displayed.</msg>
+<msg time="2025-02-13T19:48:10.521527" level="INFO">Element 'css:div.k-portlet' is displayed.</msg>
+<doc>This keyword verifies whether the Home page is opened properly or not.
+It verifies that Home page header contains Menu button, New button, Shop logo(that too in center), 
+user button, Manual reviews information window</doc>
+<status status="PASS" start="2025-02-13T19:48:10.253090" elapsed="0.270087"/>
+</kw>
+<arg>User ${USER} Opens The Browser</arg>
+<arg>AND</arg>
+<arg>User ${USER} Navigates To The Url</arg>
+<arg>AND</arg>
+<arg>User ${USER} Logs In To The Shop</arg>
+<arg>AND</arg>
+<arg>User ${USER} Verifies Homepage</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-02-13T19:47:30.335394" elapsed="40.187783"/>
+</kw>
+<suite id="s1-s1-s1" name="RegressionTest" source="D:\Shop_project\tests\RegressionTest.robot">
+<test id="s1-s1-s1-t1" name="TC-07 Create new service order" line="80">
+<kw name="User ${USER} Opens Page New Under Services Dropdown From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens Page ${page Name} Under ${dropdown} Dropdown From Left Menu">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.sidebar-expand</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T19:48:10.623219" elapsed="0.048955"/>
+</kw>
+<msg time="2025-02-13T19:48:10.672174" level="INFO">Clicking element 'css:button.sidebar-expand'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T19:48:10.905415" elapsed="0.049164"/>
+</kw>
+<msg time="2025-02-13T19:48:10.954579" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]/following-sibling::ul/li/a[contains(text(),'New')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T19:48:11.463408" elapsed="0.030045"/>
+</kw>
+<msg time="2025-02-13T19:48:11.493453" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]/following-sibling::ul/li/a[contains(text(),'New')]'.</msg>
+<doc>This keyword is used to open desired page from left menu (which is under dropdown)</doc>
+<status status="PASS" start="2025-02-13T19:48:10.538297" elapsed="15.658240"/>
+</kw>
+<kw name="User ${USER} Selects Service Item As SSL Certificate" owner="ShopLibrary" source_name="User ${USER} Selects Service Item As ${item}">
+<msg time="2025-02-13T19:48:26.198623" level="INFO">Selecting options from selection list 'css: select[title='Select Service item']' by label SSL Certificate.</msg>
+<doc>This keyword is used to select service items</doc>
+<status status="PASS" start="2025-02-13T19:48:26.196537" elapsed="0.241485"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T19:48:36.438464" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T19:48:26.438022" elapsed="10.001862"/>
+</kw>
+<kw name="User ${USER} Selects Billing Country As Afghanistan" owner="ShopLibrary" source_name="User ${USER} Selects Billing Country As ${country}">
+<msg time="2025-02-13T19:48:36.439884" level="INFO">Selecting options from selection list 'css: select[title='Select billing country']' by label Afghanistan.</msg>
+<doc>This keyword is used to select the desired country</doc>
+<status status="PASS" start="2025-02-13T19:48:36.439884" elapsed="0.114184"/>
+</kw>
+<kw name="User ${USER} Enters Certificate item name As Mycertificate" owner="ShopLibrary" source_name="User ${USER} Enters ${item} Item ${item Input Field} As ${value}">
 <kw name="Save Selenium Screenshot" owner="ShopLibrary">
-<msg time="2025-01-30T12:05:41.717328" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1738218941.4843996-0.png"&gt;&lt;img src="selenium-screenshot-1738218941.4843996-0.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-13T19:48:41.770952" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1739456321.5821586-0.png"&gt;&lt;img src="selenium-screenshot-1739456321.5821586-0.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot with a unique filename to be stored in Robot Framework compiled reports.</doc>
-<status status="PASS" start="2025-01-30T12:05:35.077328" elapsed="6.640000"/>
+<status status="PASS" start="2025-02-13T19:48:41.582158" elapsed="0.188794"/>
 </kw>
-<msg time="2025-01-30T12:05:41.717328" level="FAIL">Element with locator 'div.header-logo' not found.</msg>
-<status status="FAIL" start="2025-01-30T12:05:26.743196" elapsed="14.993383">Element with locator 'div.header-logo' not found.</status>
+<msg time="2025-02-13T19:48:41.770952" level="FAIL">Element 'input[name*='Certificate'][placeholder='name']' did not appear in 5 seconds.</msg>
+<doc>This keyword is ued to enter certificate name </doc>
+<status status="FAIL" start="2025-02-13T19:48:36.555093" elapsed="5.221362">Element 'input[name*='Certificate'][placeholder='name']' did not appear in 5 seconds.</status>
 </kw>
-<doc>Test1</doc>
-<tag>Test1</tag>
-<status status="FAIL" start="2025-01-30T12:03:34.966308" elapsed="134.512545">Element with locator 'div.header-logo' not found.</status>
-</test>
-<status status="FAIL" start="2025-01-30T12:03:34.448482" elapsed="135.032383"/>
-</suite>
-<status status="FAIL" start="2025-01-30T12:03:34.448482" elapsed="135.032383"/>
-</suite>
-<status status="FAIL" start="2025-01-30T12:03:34.429577" elapsed="135.055388"/>
-</suite>
-<statistics>
-<total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
-</total>
-<tag>
-<stat pass="0" fail="1" skip="0">Test1</stat>
-</tag>
-<suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Shop project">Shop project</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Shop project.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test1">Shop project.Tests.Test1</stat>
-</suite>
-</statistics>
-<errors>
-<msg time="2025-01-30T12:03:36.837672" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-</errors>
-</robot>
+<kw name="User ${USER} Enters Certificate Item Description As This is my test certificate" owner="ShopLibrary" source_name="User ${USER} Enters ${item} Item ${item Input Field} As ${value}">
+<doc>This keyword is ued to enter certificate name </doc>
+<status status="NOT RUN" start="2025-02-13T19:51:53.572822" elapsed="0.000000"/>
+</kw>
+<kw name="User ${USER} Selects Discount For Item SSL certificate As 2 %" owner="ShopLibrary" source_name="User ${USER} Selects Discount For Item ${item} As ${discount} %">
+<doc>This Keyword is used to select discount against the desired service item</doc>
+<status status="NOT RUN" start="2025-02-13T19:51:53.575093" elapsed="0.001022"/>
+</kw>
+<kw name="User ${USER} Fills His Company Details On Service Order" owner="ShopLibrary" source_name="User ${USER} Fills His Company Details On Service Order">
