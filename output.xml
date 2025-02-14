@@ -1,155 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2025-02-14T16:24:17.814861" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2025-02-14T20:51:36.034575" rpa="false" schemaversion="5">
 <suite id="s1" name="Shop project" source="D:\Shop_project">
 <suite id="s1-s1" name="Tests" source="D:\Shop_project\tests">
 <kw name="Run Keywords" owner="BuiltIn" type="SETUP">
 <kw name="User ${USER} Opens The Browser" owner="ShopLibrary" source_name="User ${USER} Opens The Browser">
-<msg time="2025-02-14T16:24:18.479354" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
-<status status="PASS" start="2025-02-14T16:24:18.479354" elapsed="6.225477"/>
+<msg time="2025-02-14T20:51:36.689952" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" start="2025-02-14T20:51:36.689952" elapsed="6.997610"/>
 </kw>
 <kw name="User ${USER} Navigates To The Url" owner="ShopLibrary" source_name="User ${USER} Navigates To The Url">
-<msg time="2025-02-14T16:24:24.704831" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
-<msg time="2025-02-14T16:25:20.524863" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
-<status status="PASS" start="2025-02-14T16:24:24.704831" elapsed="56.484361"/>
+<msg time="2025-02-14T20:51:43.687562" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<msg time="2025-02-14T20:52:46.780439" level="INFO">Opening url 'https://shopstage.icewarp.com/login'</msg>
+<status status="PASS" start="2025-02-14T20:51:43.687562" elapsed="63.680195"/>
 </kw>
 <kw name="User ${USER} Logs In To The Shop" owner="ShopLibrary" source_name="User ${USER} Logs In To The Shop">
-<msg time="2025-02-14T16:25:21.279728" level="INFO">Typing text 'chandrakant.waingankar@icewarp.co.in' into text field 'id:email'.</msg>
-<msg time="2025-02-14T16:25:21.748014" level="INFO">Typing text 'MIGA_2024' into text field 'id:password'.</msg>
+<msg time="2025-02-14T20:52:47.552178" level="INFO">Typing text 'chandrakant.waingankar@icewarp.co.in' into text field 'id:email'.</msg>
+<msg time="2025-02-14T20:52:47.801358" level="INFO">Typing text 'MIGA_2024' into text field 'id:password'.</msg>
 <kw name="Set Focus To Element" owner="ShopLibrary">
 <arg>//button[contains(text(),'Sign In')]</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-14T16:25:22.067034" elapsed="0.050614"/>
+<status status="PASS" start="2025-02-14T20:52:48.026840" elapsed="0.039619"/>
 </kw>
-<msg time="2025-02-14T16:25:22.117648" level="INFO">Clicking element '//button[contains(text(),'Sign In')]'.</msg>
-<status status="PASS" start="2025-02-14T16:25:21.200131" elapsed="116.010007"/>
+<msg time="2025-02-14T20:52:48.068002" level="INFO">Clicking element '//button[contains(text(),'Sign In')]'.</msg>
+<status status="PASS" start="2025-02-14T20:52:47.367757" elapsed="3.930479"/>
 </kw>
 <kw name="User ${USER} Verifies Homepage" owner="ShopLibrary" source_name="User ${USER} Verifies Homepage">
-<kw name="Save Selenium Screenshot" owner="ShopLibrary">
-<msg time="2025-02-14T16:27:17.218501" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
-<doc>Takes a screenshot with a unique filename to be stored in Robot Framework compiled reports.</doc>
-<status status="FAIL" start="2025-02-14T16:27:17.214395" elapsed="0.030200">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
-</kw>
-<msg time="2025-02-14T16:27:17.244595" level="WARN">Keyword 'Save Selenium Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
-<msg time="2025-02-14T16:27:17.244595" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
+<msg time="2025-02-14T20:52:51.336481" level="INFO">Element '//header[@class='staging-environment']' is displayed.</msg>
+<msg time="2025-02-14T20:52:51.387377" level="INFO">Element 'css:button.sidebar-expand' is displayed.</msg>
+<msg time="2025-02-14T20:52:51.420978" level="INFO">Element 'css:button.btn.create-new-item-btn' is displayed.</msg>
+<msg time="2025-02-14T20:52:51.453570" level="INFO">Element 'css:div.header-logo' is displayed.</msg>
+<msg time="2025-02-14T20:52:51.520361" level="INFO">Element 'css:span.user-button' is displayed.</msg>
+<msg time="2025-02-14T20:52:51.553513" level="INFO">Element 'css:div.k-portlet' is displayed.</msg>
 <doc>This keyword verifies whether the Home page is opened properly or not.
 It verifies that Home page header contains Menu button, New button, Shop logo(that too in center), 
 user button, Manual reviews information window</doc>
-<status status="FAIL" start="2025-02-14T16:27:17.211696" elapsed="0.037238">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:52:51.300443" elapsed="0.253070"/>
 </kw>
 <arg>User ${USER} Opens The Browser</arg>
 <arg>AND</arg>
@@ -159,581 +43,932 @@ Stacktrace:
 <arg>AND</arg>
 <arg>User ${USER} Verifies Homepage</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="FAIL" start="2025-02-14T16:24:18.479354" elapsed="178.769580">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:51:36.689952" elapsed="74.863561"/>
 </kw>
 <suite id="s1-s1-s1" name="RegressionTest" source="D:\Shop_project\tests\RegressionTest.robot">
 <test id="s1-s1-s1-t1" name="TC-01 Create New Cloud Quote" line="6">
+<kw name="User ${USER} Creates A New cloud Quote" owner="ShopLibrary" source_name="User ${USER} Creates A New ${option} Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:51.651022" elapsed="0.039860"/>
+</kw>
+<msg time="2025-02-14T20:52:51.690882" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='Cloud']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:51.924120" elapsed="0.048635"/>
+</kw>
+<msg time="2025-02-14T20:52:51.974276" level="INFO">Clicking element '//h3[text()='Cloud']/following-sibling::a'.</msg>
+<msg time="2025-02-14T20:52:56.391609" level="INFO">Verifying element '//h1' contains exact text 'Create a Cloud Quote'.</msg>
+<status status="PASS" start="2025-02-14T20:52:51.565219" elapsed="4.896034"/>
+</kw>
+<kw name="User ${USER} Selects Subscription: pre-paid" owner="ShopLibrary" source_name="User ${USER} Selects Subscription: ${subscription}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[contains(@for, 'pre_paid')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:56.534679" elapsed="0.023904"/>
+</kw>
+<msg time="2025-02-14T20:52:56.558583" level="INFO">Clicking element '//label[contains(@for, 'pre_paid')]'.</msg>
+<status status="PASS" start="2025-02-14T20:52:56.461253" elapsed="0.284087"/>
+</kw>
+<kw name="User ${USER} Selects Pre-paid Tenure: 14 Months (12 &lt;= Tenure &lt;= 36)" owner="ShopLibrary" source_name="User ${USER} Selects Pre-paid Tenure: ${tenure} Months (12 &lt;= Tenure &lt;= 36)">
+<msg time="2025-02-14T20:52:56.749380" level="INFO">Executing JavaScript:
+
+                                    let slider = document.getElementById('myRange');
+                                    slider.value = 14;
+                                    slider.dispatchEvent(new Event('input'));
+                                
+Without any arguments.</msg>
+<status status="PASS" start="2025-02-14T20:52:56.748145" elapsed="0.018583"/>
+</kw>
+<kw name="User ${USER} selects data center city: Mumbai" owner="ShopLibrary" source_name="User ${USER} Selects Data Center City: ${data Center City}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button[data-id='cloud-datacenter']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:56.830285" elapsed="0.035254"/>
+</kw>
+<msg time="2025-02-14T20:52:56.865539" level="INFO">Clicking element 'css:button[data-id='cloud-datacenter']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(.,'Mumbai')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:57.065400" elapsed="0.032698"/>
+</kw>
+<msg time="2025-02-14T20:52:57.098658" level="INFO">Clicking element '//a[contains(.,'Mumbai')]'.</msg>
+<status status="PASS" start="2025-02-14T20:52:56.770440" elapsed="0.467579"/>
+</kw>
+<kw name="User ${USER} Selects Plan: Business" owner="ShopLibrary" source_name="User ${USER} Selects Plan: ${plan}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button[title='Plans']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:57.288082" elapsed="0.036595"/>
+</kw>
+<msg time="2025-02-14T20:52:57.324677" level="INFO">Clicking element 'css:button[title='Plans']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(.,'Business')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:57.484944" elapsed="0.029397"/>
+</kw>
+<msg time="2025-02-14T20:52:57.514341" level="INFO">Clicking element '//a[contains(.,'Business')]'.</msg>
+<status status="PASS" start="2025-02-14T20:52:57.238019" elapsed="0.410662"/>
+</kw>
+<kw name="User ${USER} Selects Disocunt: 5 %" owner="ShopLibrary" source_name="User ${USER} Selects Disocunt: ${discount} %">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Discount ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:57.710114" elapsed="0.020991"/>
+</kw>
+<msg time="2025-02-14T20:52:57.731105" level="INFO">Clicking element '//button[text()=' Discount ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()=' Discount 5 %']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:57.931631" elapsed="0.041365"/>
+</kw>
+<msg time="2025-02-14T20:52:57.972996" level="INFO">Clicking element '//label[text()=' Discount 5 %']'.</msg>
+<status status="PASS" start="2025-02-14T20:52:57.648681" elapsed="0.459857"/>
+</kw>
+<kw name="User ${USER} Selects Free Period: 1 Month(s)" owner="ShopLibrary" source_name="User ${USER} Selects Free Period: ${free Period} Month(s)">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Free period ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:58.182251" elapsed="0.025174"/>
+</kw>
+<msg time="2025-02-14T20:52:58.209080" level="INFO">Clicking element '//button[text()=' Free period ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='1 month FREE']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:58.563761" elapsed="0.040657"/>
+</kw>
+<msg time="2025-02-14T20:52:58.604418" level="INFO">Clicking element '//label[text()='1 month FREE']'.</msg>
+<status status="PASS" start="2025-02-14T20:52:58.108538" elapsed="0.606997"/>
+</kw>
+<kw name="User ${USER} Selects Expiry As Today" owner="ShopLibrary" source_name="User ${USER} Selects Expiry As Today">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:#expirationDate</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:58.767335" elapsed="0.036329"/>
+</kw>
+<msg time="2025-02-14T20:52:58.803664" level="INFO">Clicking element 'css:#expirationDate'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:.today.day</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:52:58.985173" elapsed="0.021324"/>
+</kw>
+<msg time="2025-02-14T20:52:59.006497" level="INFO">Clicking element 'css:.today.day'.</msg>
+<status status="PASS" start="2025-02-14T20:52:58.715535" elapsed="10.422183"/>
+</kw>
+<kw name="User ${USER} Fills His Company Details" owner="ShopLibrary" source_name="User ${USER} Fills His Company Details">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:09.233335" elapsed="0.038584"/>
+</kw>
+<msg time="2025-02-14T20:53:09.271919" level="INFO">Typing text 'test1_Company' into text field '//*[@name='company']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='email']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:09.524287" elapsed="0.032185"/>
+</kw>
+<msg time="2025-02-14T20:53:09.556472" level="INFO">Typing text 'tester1@icewarp.com' into text field '//*[@name='email']'.</msg>
+<msg time="2025-02-14T20:53:09.706014" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.E668BFCC88169AA579F898910E4775C9.e.121")&gt;' by label India.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='first_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:09.881260" elapsed="0.030974"/>
+</kw>
+<msg time="2025-02-14T20:53:09.912986" level="INFO">Typing text 'Test1' into text field '//*[@name='first_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='last_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:10.083722" elapsed="0.023074"/>
+</kw>
+<msg time="2025-02-14T20:53:10.109280" level="INFO">Typing text 'USER1' into text field '//*[@name='last_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='phone']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:10.298805" elapsed="0.024217"/>
+</kw>
+<msg time="2025-02-14T20:53:10.323022" level="INFO">Typing text '+911234567892' into text field '//*[@name='phone']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='address']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:10.505675" elapsed="0.044681"/>
+</kw>
+<msg time="2025-02-14T20:53:10.550356" level="INFO">Typing text 'TEST_ADDRESS' into text field '//*[@name='address']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='city']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:10.773788" elapsed="0.034032"/>
+</kw>
+<msg time="2025-02-14T20:53:10.807820" level="INFO">Typing text 'TEST_CITY' into text field '//*[@name='city']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='zip']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:11.051116" elapsed="0.041763"/>
+</kw>
+<msg time="2025-02-14T20:53:11.092879" level="INFO">Typing text '123456' into text field '//*[@name='zip']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company_id']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:11.308467" elapsed="0.030882"/>
+</kw>
+<msg time="2025-02-14T20:53:11.339349" level="INFO">Typing text 'CID_3456' into text field '//*[@name='company_id']'.</msg>
+<status status="PASS" start="2025-02-14T20:53:09.137718" elapsed="2.337682"/>
+</kw>
+<kw name="User ${USER} Submits The Quote" owner="ShopLibrary" source_name="User ${USER} Submits The Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[contains(.,'Quote subscription')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:11.542172" elapsed="0.028250"/>
+</kw>
+<msg time="2025-02-14T20:53:11.570422" level="INFO">Clicking element '//button[contains(.,'Quote subscription')]'.</msg>
+<msg time="2025-02-14T20:53:14.065853" level="INFO">Verifying element 'css:div.alert-success div.alert-text' contains exact text 'Cloud Quote for "test1_Company" has been created.'.</msg>
+<status status="PASS" start="2025-02-14T20:53:11.475400" elapsed="2.622858"/>
+</kw>
 <doc>To verify that a user can create a new cloud quote successfully</doc>
 <tag>All</tag>
 <tag>Quotes</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.252756" elapsed="0.000000">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:52:51.565219" elapsed="22.535387"/>
 </test>
 <test id="s1-s1-s1-t2" name="TC-02 Create New SaaS Quote" line="22">
+<kw name="User ${USER} Creates A New SaaS Quote" owner="ShopLibrary" source_name="User ${USER} Creates A New ${option} Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:14.148825" elapsed="0.025132"/>
+</kw>
+<msg time="2025-02-14T20:53:14.173957" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='SaaS']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:14.337231" elapsed="0.049388"/>
+</kw>
+<msg time="2025-02-14T20:53:14.386619" level="INFO">Clicking element '//h3[text()='SaaS']/following-sibling::a'.</msg>
+<msg time="2025-02-14T20:53:15.527798" level="INFO">Verifying element '//h1' contains exact text 'Create a Saas Quote'.</msg>
+<status status="PASS" start="2025-02-14T20:53:14.101747" elapsed="1.450847"/>
+</kw>
+<kw name="User ${USER} Selects Currency: dollar" owner="ShopLibrary" source_name="User ${USER} Selects Currency: ${currency}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//option[contains(text(), 'USD')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:15.613182" elapsed="0.025049"/>
+</kw>
+<msg time="2025-02-14T20:53:15.638231" level="INFO">Clicking element '//option[contains(text(), 'USD')]'.</msg>
+<status status="PASS" start="2025-02-14T20:53:15.552594" elapsed="0.167407"/>
+</kw>
+<kw name="User ${USER} Selects Subscription: pre-paid" owner="ShopLibrary" source_name="User ${USER} Selects Subscription: ${subscription}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[contains(@for, 'pre_paid')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:15.785526" elapsed="0.033587"/>
+</kw>
+<msg time="2025-02-14T20:53:15.819113" level="INFO">Clicking element '//label[contains(@for, 'pre_paid')]'.</msg>
+<status status="PASS" start="2025-02-14T20:53:15.720001" elapsed="0.266429"/>
+</kw>
+<kw name="User ${USER} Selects Pre-paid Tenure: 14 Months (12 &lt;= Tenure &lt;= 36)" owner="ShopLibrary" source_name="User ${USER} Selects Pre-paid Tenure: ${tenure} Months (12 &lt;= Tenure &lt;= 36)">
+<msg time="2025-02-14T20:53:15.989531" level="INFO">Executing JavaScript:
+
+                                    let slider = document.getElementById('myRange');
+                                    slider.value = 14;
+                                    slider.dispatchEvent(new Event('input'));
+                                
+Without any arguments.</msg>
+<status status="PASS" start="2025-02-14T20:53:15.989531" elapsed="0.014308"/>
+</kw>
+<kw name="User ${USER} Selects Plan: Business" owner="ShopLibrary" source_name="User ${USER} Selects Plan: ${plan}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button[title='Plans']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:16.052912" elapsed="0.049871"/>
+</kw>
+<msg time="2025-02-14T20:53:16.102783" level="INFO">Clicking element 'css:button[title='Plans']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(.,'Business')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:16.304497" elapsed="0.028932"/>
+</kw>
+<msg time="2025-02-14T20:53:16.333429" level="INFO">Clicking element '//a[contains(.,'Business')]'.</msg>
+<status status="PASS" start="2025-02-14T20:53:16.005897" elapsed="0.476109"/>
+</kw>
+<kw name="User ${USER} Selects Disocunt: 5 %" owner="ShopLibrary" source_name="User ${USER} Selects Disocunt: ${discount} %">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Discount ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:16.529727" elapsed="0.043475"/>
+</kw>
+<msg time="2025-02-14T20:53:16.573202" level="INFO">Clicking element '//button[text()=' Discount ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()=' Discount 5 %']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:16.936918" elapsed="0.031545"/>
+</kw>
+<msg time="2025-02-14T20:53:16.968463" level="INFO">Clicking element '//label[text()=' Discount 5 %']'.</msg>
+<status status="PASS" start="2025-02-14T20:53:16.484000" elapsed="0.607121"/>
+</kw>
+<kw name="User USER Selects Trial (free Period) Period: 1 Month(s)" owner="ShopLibrary" source_name="User ${USER} Selects Trial (free Period) Period: ${free Period} Month(s)">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()=' Trial (free period) ']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:17.182115" elapsed="0.039141"/>
+</kw>
+<msg time="2025-02-14T20:53:17.221256" level="INFO">Clicking element '//button[text()=' Trial (free period) ']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='1 month FREE']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:17.634637" elapsed="0.032914"/>
+</kw>
+<msg time="2025-02-14T20:53:17.667551" level="INFO">Clicking element '//label[text()='1 month FREE']'.</msg>
+<status status="PASS" start="2025-02-14T20:53:17.094785" elapsed="0.719313"/>
+</kw>
+<kw name="User ${USER} Selects Expiry As Today" owner="ShopLibrary" source_name="User ${USER} Selects Expiry As Today">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:#expirationDate</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:17.869659" elapsed="0.053054"/>
+</kw>
+<msg time="2025-02-14T20:53:17.922713" level="INFO">Clicking element 'css:#expirationDate'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:.today.day</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:18.147735" elapsed="0.027478"/>
+</kw>
+<msg time="2025-02-14T20:53:18.175213" level="INFO">Clicking element 'css:.today.day'.</msg>
+<status status="PASS" start="2025-02-14T20:53:17.814098" elapsed="10.497731"/>
+</kw>
+<kw name="User ${USER} Fills His Company Details" owner="ShopLibrary" source_name="User ${USER} Fills His Company Details">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:28.433514" elapsed="0.040990"/>
+</kw>
+<msg time="2025-02-14T20:53:28.474504" level="INFO">Typing text 'test1_Company' into text field '//*[@name='company']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='email']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:28.773303" elapsed="0.034650"/>
+</kw>
+<msg time="2025-02-14T20:53:28.807953" level="INFO">Typing text 'tester1@icewarp.com' into text field '//*[@name='email']'.</msg>
+<msg time="2025-02-14T20:53:29.008325" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.8D3F183E278BFB42DEEC827F346579B9.e.372")&gt;' by label India.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='first_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:29.250614" elapsed="0.057814"/>
+</kw>
+<msg time="2025-02-14T20:53:29.308428" level="INFO">Typing text 'Test1' into text field '//*[@name='first_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='last_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:29.603518" elapsed="0.027207"/>
+</kw>
+<msg time="2025-02-14T20:53:29.630725" level="INFO">Typing text 'USER1' into text field '//*[@name='last_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='phone']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:29.888474" elapsed="0.053442"/>
+</kw>
+<msg time="2025-02-14T20:53:29.941916" level="INFO">Typing text '+911234567892' into text field '//*[@name='phone']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='address']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:30.254817" elapsed="0.038895"/>
+</kw>
+<msg time="2025-02-14T20:53:30.293712" level="INFO">Typing text 'TEST_ADDRESS' into text field '//*[@name='address']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='city']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:30.597343" elapsed="0.034127"/>
+</kw>
+<msg time="2025-02-14T20:53:30.631470" level="INFO">Typing text 'TEST_CITY' into text field '//*[@name='city']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='zip']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:30.891676" elapsed="0.037758"/>
+</kw>
+<msg time="2025-02-14T20:53:30.936819" level="INFO">Typing text '123456' into text field '//*[@name='zip']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='company_id']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:31.208894" elapsed="0.036160"/>
+</kw>
+<msg time="2025-02-14T20:53:31.245054" level="INFO">Typing text 'CID_3456' into text field '//*[@name='company_id']'.</msg>
+<status status="PASS" start="2025-02-14T20:53:28.311829" elapsed="3.114800"/>
+</kw>
+<kw name="User ${USER} Submits The Quote" owner="ShopLibrary" source_name="User ${USER} Submits The Quote">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[contains(.,'Quote subscription')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:31.512599" elapsed="0.043089"/>
+</kw>
+<msg time="2025-02-14T20:53:31.555688" level="INFO">Clicking element '//button[contains(.,'Quote subscription')]'.</msg>
+<msg time="2025-02-14T20:53:33.977614" level="INFO">Verifying element 'css:div.alert-success div.alert-text' contains exact text 'Cloud Quote for "test1_Company" has been created.'.</msg>
+<status status="PASS" start="2025-02-14T20:53:31.426629" elapsed="2.602000"/>
+</kw>
 <doc>To verify that a user can create a new SaaS quote successfully</doc>
 <tag>All</tag>
 <tag>Quotes</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.252756" elapsed="0.006847">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:53:14.101747" elapsed="19.926882"/>
 </test>
 <test id="s1-s1-s1-t3" name="TC-03 Create New Lead #1" line="37">
+<kw name="User ${USER} Creates New Lead" owner="ShopLibrary" source_name="User ${USER} Creates New Lead">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:34.096755" elapsed="0.033072"/>
+</kw>
+<msg time="2025-02-14T20:53:34.129827" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='Leads']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:34.357334" elapsed="0.058267"/>
+</kw>
+<msg time="2025-02-14T20:53:34.415601" level="INFO">Clicking element '//h3[text()='Leads']/following-sibling::a'.</msg>
+<msg time="2025-02-14T20:53:36.378870" level="INFO">Verifying element '//h1' contains exact text 'Create a Lead'.</msg>
+<doc>" Here this keyword actually opens up the New Lead creation page</doc>
+<status status="PASS" start="2025-02-14T20:53:34.028629" elapsed="2.393705"/>
+</kw>
+<kw name="User ${USER} Selects Assigns To radio Option As: Partner" owner="ShopLibrary" source_name="User ${USER} Selects Assigns To Radio Option As: ${option}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='Partner']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:36.487537" elapsed="0.028326"/>
+</kw>
+<msg time="2025-02-14T20:53:36.515863" level="INFO">Clicking element '//label[text()='Partner']'.</msg>
+<doc>This keyword is used to select the radio buttons regarding "Assign To" on Leads creation page</doc>
+<status status="PASS" start="2025-02-14T20:53:36.428673" elapsed="0.205282"/>
+</kw>
+<kw name="User ${USER} Selects Source Option As: Website" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-14T20:53:36.636502" level="INFO">Selecting options from selection list '//select[@title='Source']' by label Website.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-14T20:53:36.636502" elapsed="0.166055"/>
+</kw>
+<kw name="User ${USER} Selects Stage Option As: Open" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-14T20:53:36.809648" level="INFO">Selecting options from selection list '//select[@title='Stage']' by label Open.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-14T20:53:36.809648" elapsed="0.197250"/>
+</kw>
+<kw name="User ${USER} Selects Country Option As: India" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-14T20:53:37.006898" level="INFO">Selecting options from selection list '//select[@title='Country']' by label India.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-14T20:53:37.006898" elapsed="0.164881"/>
+</kw>
+<kw name="User ${USER} Enters Description: Give me Liberty or Give me coins" owner="ShopLibrary" source_name="User ${USER} Enters Description: ${description Text}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:textarea#description</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:37.254875" elapsed="0.046194"/>
+</kw>
+<msg time="2025-02-14T20:53:37.301069" level="INFO">Typing text 'Give me Liberty or Give me coins' into text field 'css:textarea#description'.</msg>
+<doc>This keyword is used to enter any description regarding the Lead. However it is not mandatory.</doc>
+<status status="PASS" start="2025-02-14T20:53:37.171779" elapsed="0.309347"/>
+</kw>
+<kw name="User ${USER} Selects Name On Field 1 And Enters Value As: My_Name_is_khan" owner="ShopLibrary" source_name="User ${USER} Selects ${field Option} On Field ${row Number} And Enters Value As: ${value In Textbox}">
+<msg time="2025-02-14T20:53:37.553371" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.DFA69D64AD06CA799CB2E89A6B34F088.e.766")&gt;' by label Name.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.DFA69D64AD06CA799CB2E89A6B34F088.e.767")&gt;</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:37.705854" elapsed="0.024152"/>
+</kw>
+<msg time="2025-02-14T20:53:37.730994" level="INFO">Typing text 'My_Name_is_khan' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.DFA69D64AD06CA799CB2E89A6B34F088.e.767")&gt;'.</msg>
+<status status="PASS" start="2025-02-14T20:53:37.481126" elapsed="0.392758"/>
+</kw>
+<kw name="User ${USER} Submits The Lead Creation Form" owner="ShopLibrary" source_name="User ${USER} Submits The Lead Creation Form">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: .card-footer button</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:37.949676" elapsed="0.032485"/>
+</kw>
+<msg time="2025-02-14T20:53:37.982161" level="INFO">Clicking element 'css: .card-footer button'.</msg>
+<msg time="2025-02-14T20:53:40.052537" level="INFO">Verifying element 'css: div.alert-text' contains exact text 'Lead has been created.'.</msg>
+<status status="PASS" start="2025-02-14T20:53:37.873884" elapsed="2.233362"/>
+</kw>
 <doc>To verify that user can create a new Lead sucessfully</doc>
 <tag>All</tag>
 <tag>Leads</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.261636" elapsed="0.002970">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:53:34.028629" elapsed="6.079897"/>
 </test>
 <test id="s1-s1-s1-t4" name="TC-04 Create New Lead #2" line="49">
+<kw name="User ${USER} Creates New Lead" owner="ShopLibrary" source_name="User ${USER} Creates New Lead">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.btn.create-new-item-btn</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:40.168492" elapsed="0.031659"/>
+</kw>
+<msg time="2025-02-14T20:53:40.200151" level="INFO">Clicking element 'css:button.btn.create-new-item-btn'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//h3[text()='Leads']/following-sibling::a</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:40.367821" elapsed="0.033080"/>
+</kw>
+<msg time="2025-02-14T20:53:40.400901" level="INFO">Clicking element '//h3[text()='Leads']/following-sibling::a'.</msg>
+<msg time="2025-02-14T20:53:41.461229" level="INFO">Verifying element '//h1' contains exact text 'Create a Lead'.</msg>
+<doc>" Here this keyword actually opens up the New Lead creation page</doc>
+<status status="PASS" start="2025-02-14T20:53:40.110380" elapsed="1.384228"/>
+</kw>
+<kw name="User ${USER} Selects Assigns To radio Option As: Partner" owner="ShopLibrary" source_name="User ${USER} Selects Assigns To Radio Option As: ${option}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[text()='Partner']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:41.581461" elapsed="0.030403"/>
+</kw>
+<msg time="2025-02-14T20:53:41.611864" level="INFO">Clicking element '//label[text()='Partner']'.</msg>
+<doc>This keyword is used to select the radio buttons regarding "Assign To" on Leads creation page</doc>
+<status status="PASS" start="2025-02-14T20:53:41.498946" elapsed="0.240709"/>
+</kw>
+<kw name="User ${USER} Selects Source Option As: Website" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-14T20:53:41.739655" level="INFO">Selecting options from selection list '//select[@title='Source']' by label Website.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-14T20:53:41.739655" elapsed="0.155925"/>
+</kw>
+<kw name="User ${USER} Selects Stage Option As: Open" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-14T20:53:41.895580" level="INFO">Selecting options from selection list '//select[@title='Stage']' by label Open.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-14T20:53:41.895580" elapsed="0.184021"/>
+</kw>
+<kw name="User ${USER} Selects Country Option As: India" owner="ShopLibrary" source_name="User ${USER} Selects ${field} Option As: ${option}">
+<msg time="2025-02-14T20:53:42.079601" level="INFO">Selecting options from selection list '//select[@title='Country']' by label India.</msg>
+<doc>This keyword is used to select the values in vaious basic info details fields such as Source, Stage and Country</doc>
+<status status="PASS" start="2025-02-14T20:53:42.079601" elapsed="0.180924"/>
+</kw>
+<kw name="User ${USER} Enters Description: Give me Liberty or Give me coins" owner="ShopLibrary" source_name="User ${USER} Enters Description: ${description Text}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:textarea#description</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:42.347195" elapsed="0.050522"/>
+</kw>
+<msg time="2025-02-14T20:53:42.397717" level="INFO">Typing text 'Give me Liberty or Give me coins' into text field 'css:textarea#description'.</msg>
+<doc>This keyword is used to enter any description regarding the Lead. However it is not mandatory.</doc>
+<status status="PASS" start="2025-02-14T20:53:42.263044" elapsed="0.344982"/>
+</kw>
+<kw name="User ${USER} Selects Name On Field 1 And Enters Value As: My_Name_is_khan" owner="ShopLibrary" source_name="User ${USER} Selects ${field Option} On Field ${row Number} And Enters Value As: ${value In Textbox}">
+<msg time="2025-02-14T20:53:42.666696" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A250FE77C9F44F3D3F46BB48216D4570.e.938")&gt;' by label Name.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A250FE77C9F44F3D3F46BB48216D4570.e.939")&gt;</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:42.788167" elapsed="0.035157"/>
+</kw>
+<msg time="2025-02-14T20:53:42.823324" level="INFO">Typing text 'My_Name_is_khan' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A250FE77C9F44F3D3F46BB48216D4570.e.939")&gt;'.</msg>
+<status status="PASS" start="2025-02-14T20:53:42.608026" elapsed="0.353308"/>
+</kw>
+<kw name="User ${USER} Adds Item To User Details" owner="ShopLibrary" source_name="User ${USER} Adds Item To User Details">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: button.create-field</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:43.022032" elapsed="0.033363"/>
+</kw>
+<msg time="2025-02-14T20:53:43.055395" level="INFO">Clicking element 'css: button.create-field'.</msg>
+<status status="PASS" start="2025-02-14T20:53:42.961334" elapsed="0.231770"/>
+</kw>
+<kw name="User ${USER} Selects Company On Field 2 And Enters Value As: My_Name_is_khan_Company" owner="ShopLibrary" source_name="User ${USER} Selects ${field Option} On Field ${row Number} And Enters Value As: ${value In Textbox}">
+<msg time="2025-02-14T20:53:43.262588" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A250FE77C9F44F3D3F46BB48216D4570.e.968")&gt;' by label Company.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A250FE77C9F44F3D3F46BB48216D4570.e.973")&gt;</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:43.417687" elapsed="0.028349"/>
+</kw>
+<msg time="2025-02-14T20:53:43.446036" level="INFO">Typing text 'My_Name_is_khan_Company' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A250FE77C9F44F3D3F46BB48216D4570.e.973")&gt;'.</msg>
+<status status="PASS" start="2025-02-14T20:53:43.194974" elapsed="0.416020"/>
+</kw>
+<kw name="User ${USER} Submits The Lead Creation Form" owner="ShopLibrary" source_name="User ${USER} Submits The Lead Creation Form">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: .card-footer button</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:53:43.663888" elapsed="0.033226"/>
+</kw>
+<msg time="2025-02-14T20:53:43.697114" level="INFO">Clicking element 'css: .card-footer button'.</msg>
+<status status="PASS" start="2025-02-14T20:53:43.612503" elapsed="5.654855"/>
+</kw>
 <doc>To verify that user can create a new Lead sucessfully</doc>
 <tag>All</tag>
 <tag>Leads</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.264606" elapsed="0.000000">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:53:40.110380" elapsed="9.158507"/>
 </test>
 <test id="s1-s1-s1-t5" name="TC-05 Open Royalties page from leftmenu" line="65">
+<kw name="User ${USER} Opens Royalties Page From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens ${page Name} Page From Left Menu">
+<kw name="Save Selenium Screenshot" owner="ShopLibrary">
+<msg time="2025-02-14T20:53:54.420931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1739546634.3011036-0.png"&gt;&lt;img src="selenium-screenshot-1739546634.3011036-0.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot with a unique filename to be stored in Robot Framework compiled reports.</doc>
+<status status="PASS" start="2025-02-14T20:53:54.301103" elapsed="0.119828"/>
+</kw>
+<msg time="2025-02-14T20:53:54.420931" level="FAIL">Element 'css:button.sidebar-expand' did not appear in 5 seconds.</msg>
+<doc>This keyword is used to open desired page from left menu (which is not under any dropdown)</doc>
+<status status="FAIL" start="2025-02-14T20:53:49.268887" elapsed="5.185603">Element 'css:button.sidebar-expand' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Page is opened succesfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-14T20:53:54.454490" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-14T20:53:54.454490" elapsed="0.000000"/>
+</kw>
 <doc>To verify that user is able to open Royalties page from left menu</doc>
 <tag>All</tag>
 <tag>pages</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.271250" elapsed="0.000000">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="FAIL" start="2025-02-14T20:53:49.268887" elapsed="5.185603">Element 'css:button.sidebar-expand' did not appear in 5 seconds.</status>
 </test>
 <test id="s1-s1-s1-t6" name="TC-06 Open new Lead Page from leftmenu" line="72">
+<kw name="User ${USER} Opens Page New Under Leads Dropdown From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens Page ${page Name} Under ${dropdown} Dropdown From Left Menu">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.sidebar-expand</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:00.941482" elapsed="0.021388"/>
+</kw>
+<msg time="2025-02-14T20:54:00.962870" level="INFO">Clicking element 'css:button.sidebar-expand'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:01.173835" elapsed="0.044251"/>
+</kw>
+<msg time="2025-02-14T20:54:01.218086" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]/following-sibling::ul/li/a[contains(text(),'New')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:01.417619" elapsed="0.065179"/>
+</kw>
+<msg time="2025-02-14T20:54:01.482798" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Leads')]/following-sibling::ul/li/a[contains(text(),'New')]'.</msg>
+<doc>This keyword is used to open desired page from left menu (which is under dropdown)</doc>
+<status status="PASS" start="2025-02-14T20:53:54.462650" elapsed="8.019991"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-14T20:54:02.482641" level="INFO">Page is opened successfully</msg>
+<arg>Page is opened successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-14T20:54:02.482641" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T20:54:12.484841" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T20:54:02.484244" elapsed="10.001721"/>
+</kw>
 <doc>To veirfy that user is able to open new Lead page from left menu</doc>
 <tag>All</tag>
 <tag>pages</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.279396" elapsed="0.001612">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:53:54.460995" elapsed="18.026275"/>
 </test>
 <test id="s1-s1-s1-t7" name="TC-07 Create new service order" line="80">
+<kw name="User ${USER} Opens Page New Under Services Dropdown From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens Page ${page Name} Under ${dropdown} Dropdown From Left Menu">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.sidebar-expand</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:12.548786" elapsed="0.033960"/>
+</kw>
+<msg time="2025-02-14T20:54:12.582746" level="INFO">Clicking element 'css:button.sidebar-expand'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:12.818992" elapsed="0.041304"/>
+</kw>
+<msg time="2025-02-14T20:54:12.867355" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]/following-sibling::ul/li/a[contains(text(),'New')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:13.288515" elapsed="0.036965"/>
+</kw>
+<msg time="2025-02-14T20:54:13.325480" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Services')]/following-sibling::ul/li/a[contains(text(),'New')]'.</msg>
+<doc>This keyword is used to open desired page from left menu (which is under dropdown)</doc>
+<status status="PASS" start="2025-02-14T20:54:12.488895" elapsed="7.434659"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T20:54:21.924034" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T20:54:19.923554" elapsed="2.000480"/>
+</kw>
+<kw name="User ${USER} Selects Service Item As SSL Certificate" owner="ShopLibrary" source_name="User ${USER} Selects Service Item As ${item}">
+<msg time="2025-02-14T20:54:21.924034" level="INFO">Selecting options from selection list 'css: select[title='Select Service item']' by label SSL Certificate.</msg>
+<doc>This keyword is used to select service items</doc>
+<status status="PASS" start="2025-02-14T20:54:21.924034" elapsed="0.213881"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T20:54:27.138577" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T20:54:22.137915" elapsed="5.000662"/>
+</kw>
+<kw name="User ${USER} Selects Billing Country As Afghanistan" owner="ShopLibrary" source_name="User ${USER} Selects Billing Country As ${country}">
+<msg time="2025-02-14T20:54:27.140114" level="INFO">Selecting options from selection list 'css: select[title='Select billing country']' by label Afghanistan.</msg>
+<doc>This keyword is used to select the desired country</doc>
+<status status="PASS" start="2025-02-14T20:54:27.138577" elapsed="0.159284"/>
+</kw>
+<kw name="User ${USER} Enters certificate item name As Mycertificate" owner="ShopLibrary" source_name="User ${USER} Enters ${item} Item ${item Input Field} As ${value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name*='certificate'][placeholder*='name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:27.358869" elapsed="0.044122"/>
+</kw>
+<msg time="2025-02-14T20:54:27.402991" level="INFO">Typing text 'Mycertificate' into text field 'css: input[name*='certificate'][placeholder*='name']'.</msg>
+<doc>This keyword is ued to enter certificate name </doc>
+<status status="PASS" start="2025-02-14T20:54:27.297861" elapsed="0.312677"/>
+</kw>
+<kw name="User ${USER} Enters certificate Item Description As This is my test certificate" owner="ShopLibrary" source_name="User ${USER} Enters ${item} Item ${item Input Field} As ${value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name*='certificate'][placeholder*='Description']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:27.672411" elapsed="0.037494"/>
+</kw>
+<msg time="2025-02-14T20:54:27.709905" level="INFO">Typing text 'This is my test certificate' into text field 'css: input[name*='certificate'][placeholder*='Description']'.</msg>
+<doc>This keyword is ued to enter certificate name </doc>
+<status status="PASS" start="2025-02-14T20:54:27.610538" elapsed="0.337119"/>
+</kw>
+<kw name="User ${USER} Selects Discount For Item SSL Certificate As 2 %" owner="ShopLibrary" source_name="User ${USER} Selects Discount For Item ${item} As ${discount} %">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: button[data-target='#discountBox']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:28.012187" elapsed="0.034620"/>
+</kw>
+<msg time="2025-02-14T20:54:28.046807" level="INFO">Clicking element 'css: button[data-target='#discountBox']'.</msg>
+<msg time="2025-02-14T20:54:28.527842" level="INFO">Selecting options from selection list '//div[@class='row align-items-center' and contains(.,'SSL Certificate')]/descendant::select' by label 2 %.</msg>
+<doc>This Keyword is used to select discount against the desired service item</doc>
+<status status="PASS" start="2025-02-14T20:54:27.955993" elapsed="0.761324"/>
+</kw>
+<kw name="User ${USER} Fills His Company Details On Service Order" owner="ShopLibrary" source_name="User ${USER} Fills His Company Details On Service Order">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_company']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:28.858977" elapsed="0.043038"/>
+</kw>
+<msg time="2025-02-14T20:54:28.902015" level="INFO">Typing text 'test1_Company' into text field '//*[@name='customer_company']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_email']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:29.205657" elapsed="0.039342"/>
+</kw>
+<msg time="2025-02-14T20:54:29.244999" level="INFO">Typing text 'tester1@icewarp.com' into text field '//*[@name='customer_email']'.</msg>
+<msg time="2025-02-14T20:54:29.495880" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="577fa723c649421e5d82b2c4c8fe4d7f", element="f.445E578314AA9F21344A8DEA4C7B13FE.d.A85768EE0F7993ED55C0A97A1AE925D6.e.1168")&gt;' by label India.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_first_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:29.738321" elapsed="0.052913"/>
+</kw>
+<msg time="2025-02-14T20:54:29.791234" level="INFO">Typing text 'Test1' into text field '//*[@name='customer_first_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_last_name']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:30.049599" elapsed="0.041878"/>
+</kw>
+<msg time="2025-02-14T20:54:30.091477" level="INFO">Typing text 'USER1' into text field '//*[@name='customer_last_name']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_phone']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:30.383442" elapsed="0.039802"/>
+</kw>
+<msg time="2025-02-14T20:54:30.423244" level="INFO">Typing text '+911234567892' into text field '//*[@name='customer_phone']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_address']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:30.732051" elapsed="0.028221"/>
+</kw>
+<msg time="2025-02-14T20:54:30.760272" level="INFO">Typing text 'TEST_ADDRESS' into text field '//*[@name='customer_address']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_city']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:31.056703" elapsed="0.033011"/>
+</kw>
+<msg time="2025-02-14T20:54:31.089714" level="INFO">Typing text 'TEST_CITY' into text field '//*[@name='customer_city']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_zip']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:31.367793" elapsed="0.030964"/>
+</kw>
+<msg time="2025-02-14T20:54:31.398757" level="INFO">Typing text '123456' into text field '//*[@name='customer_zip']'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//*[@name='customer_company_id']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:31.654895" elapsed="0.036192"/>
+</kw>
+<msg time="2025-02-14T20:54:31.697460" level="INFO">Typing text 'CID_3456' into text field '//*[@name='customer_company_id']'.</msg>
+<status status="PASS" start="2025-02-14T20:54:28.719340" elapsed="3.155917"/>
+</kw>
+<kw name="User ${USER} Submits The Service Order" owner="ShopLibrary" source_name="User ${USER} Submits The Service Order">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[value='Create Service order']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:31.935503" elapsed="0.034593"/>
+</kw>
+<msg time="2025-02-14T20:54:31.970096" level="INFO">Clicking element 'css: input[value='Create Service order']'.</msg>
+<msg time="2025-02-14T20:54:37.853920" level="INFO">Verifying element 'css: div.alert-text' contains exact text 'Services Order has been successfully created.'.</msg>
+<status status="PASS" start="2025-02-14T20:54:31.877022" elapsed="6.017793"/>
+</kw>
 <doc>To verify that user is able to create new service order</doc>
 <tag>All</tag>
 <tag>serviceOrder</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.284093" elapsed="0.002170">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:54:12.488895" elapsed="25.405920"/>
 </test>
 <test id="s1-s1-s1-t8" name="TC-08 Create new User" line="94">
+<kw name="Get Unit Timestamp" owner="ShopLibrary">
+<msg time="2025-02-14T20:54:37.899972" level="INFO">${timestamp} = 1739546677</msg>
+<var>${timestamp}</var>
+<doc>Returns current unix timestamp.</doc>
+<status status="PASS" start="2025-02-14T20:54:37.899972" elapsed="0.000000"/>
+</kw>
+<kw name="User ${USER} Opens Page New Under Users Dropdown From Left Menu" owner="ShopLibrary" source_name="User ${USER} Opens Page ${page Name} Under ${dropdown} Dropdown From Left Menu">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:button.sidebar-expand</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:37.973950" elapsed="0.037706"/>
+</kw>
+<msg time="2025-02-14T20:54:38.011656" level="INFO">Clicking element 'css:button.sidebar-expand'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Users')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:38.265032" elapsed="0.061204"/>
+</kw>
+<msg time="2025-02-14T20:54:38.326236" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Users')]'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//nav[@id='sidebar']/ul/li/a[contains(text(),'Users')]/following-sibling::ul/li/a[contains(text(),'New')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:38.761350" elapsed="0.027319"/>
+</kw>
+<msg time="2025-02-14T20:54:38.788669" level="INFO">Clicking element '//nav[@id='sidebar']/ul/li/a[contains(text(),'Users')]/following-sibling::ul/li/a[contains(text(),'New')]'.</msg>
+<doc>This keyword is used to open desired page from left menu (which is under dropdown)</doc>
+<status status="PASS" start="2025-02-14T20:54:37.905568" elapsed="1.918931"/>
+</kw>
+<kw name="User ${USER} Uploads Avatar Image test_data/cat.png" owner="ShopLibrary" source_name="User ${USER} Uploads Avatar Image ${path To Avatar Img}">
+<msg time="2025-02-14T20:54:39.857557" level="INFO">Sending D:\Shop_project\test_data\cat.png to browser.</msg>
+<doc>This keyword is used to upload avatar image while creating new user</doc>
+<status status="PASS" start="2025-02-14T20:54:39.825188" elapsed="0.096404"/>
+</kw>
+<kw name="User ${USER} Enters name As Eric james" owner="ShopLibrary" source_name="User ${USER} Enters ${info Field} As ${info Field Value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name=name]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:39.970236" elapsed="0.030350"/>
+</kw>
+<msg time="2025-02-14T20:54:40.000586" level="INFO">Typing text 'Eric james' into text field 'css: input[name=name]'.</msg>
+<doc>This keyword is used to fill the basic information details of the user</doc>
+<status status="PASS" start="2025-02-14T20:54:39.923619" elapsed="0.246666"/>
+</kw>
+<kw name="User ${USER} Enters email As Eric.james_${timestamp}@ice.com" owner="ShopLibrary" source_name="User ${USER} Enters ${info Field} As ${info Field Value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name=email]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:40.217070" elapsed="0.033421"/>
+</kw>
+<msg time="2025-02-14T20:54:40.250491" level="INFO">Typing text 'Eric.james_1739546677@ice.com' into text field 'css: input[name=email]'.</msg>
+<doc>This keyword is used to fill the basic information details of the user</doc>
+<status status="PASS" start="2025-02-14T20:54:40.170285" elapsed="0.348344"/>
+</kw>
+<kw name="User ${USER} Enters position As QA_tester" owner="ShopLibrary" source_name="User ${USER} Enters ${info Field} As ${info Field Value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name=position]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:40.575692" elapsed="0.030411"/>
+</kw>
+<msg time="2025-02-14T20:54:40.606103" level="INFO">Typing text 'QA_tester' into text field 'css: input[name=position]'.</msg>
+<doc>This keyword is used to fill the basic information details of the user</doc>
+<status status="PASS" start="2025-02-14T20:54:40.522947" elapsed="0.241641"/>
+</kw>
+<kw name="User ${USER} Enters password As Mail@123" owner="ShopLibrary" source_name="User ${USER} Enters ${info Field} As ${info Field Value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name=password]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:40.839812" elapsed="0.051469"/>
+</kw>
+<msg time="2025-02-14T20:54:40.891281" level="INFO">Typing text 'Mail@123' into text field 'css: input[name=password]'.</msg>
+<doc>This keyword is used to fill the basic information details of the user</doc>
+<status status="PASS" start="2025-02-14T20:54:40.766597" elapsed="0.304265"/>
+</kw>
+<kw name="User ${USER} Enters password_confirmation As Mail@123" owner="ShopLibrary" source_name="User ${USER} Enters ${info Field} As ${info Field Value}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css: input[name=password_confirmation]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:41.142459" elapsed="0.038900"/>
+</kw>
+<msg time="2025-02-14T20:54:41.181359" level="INFO">Typing text 'Mail@123' into text field 'css: input[name=password_confirmation]'.</msg>
+<doc>This keyword is used to fill the basic information details of the user</doc>
+<status status="PASS" start="2025-02-14T20:54:41.070862" elapsed="0.290487"/>
+</kw>
+<kw name="User ${USER} Assigns The Role Admin To The New User" owner="ShopLibrary" source_name="User ${USER} Assigns The Role ${role Name} To The New User">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//label[contains(.,'Admin')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:41.433365" elapsed="0.033111"/>
+</kw>
+<msg time="2025-02-14T20:54:41.466476" level="INFO">Clicking element '//label[contains(.,'Admin')]'.</msg>
+<doc>This keyword is ued to assign the roles to the new user while creating it</doc>
+<status status="PASS" start="2025-02-14T20:54:41.363157" elapsed="0.245800"/>
+</kw>
+<kw name="User ${USER} Assigns Permission For Clouds To Overview" owner="ShopLibrary" source_name="User ${USER} Assigns Permission For ${permission For} To ${permission To}">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//div[label[contains(text(), 'Clouds')]]/descendant::label[contains(., 'Overview')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:41.679127" elapsed="0.035736"/>
+</kw>
+<msg time="2025-02-14T20:54:41.714863" level="INFO">Clicking element '//div[label[contains(text(), 'Clouds')]]/descendant::label[contains(., 'Overview')]'.</msg>
+<doc>This keyword is used to assign permissions to the new user </doc>
+<status status="PASS" start="2025-02-14T20:54:41.608957" elapsed="0.252244"/>
+</kw>
+<kw name="User ${USER} Submits The New User Data" owner="ShopLibrary" source_name="User ${USER} Submits The New User Data">
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//button[text()='Create']</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:41.928531" elapsed="0.054323"/>
+</kw>
+<msg time="2025-02-14T20:54:41.982854" level="INFO">Clicking element '//button[text()='Create']'.</msg>
+<status status="PASS" start="2025-02-14T20:54:41.862911" elapsed="12.947040"/>
+</kw>
 <doc>To verify that user is able to create new user</doc>
 <tag>All</tag>
 <tag>newuser</tag>
 <tag>Test1</tag>
-<status status="FAIL" start="2025-02-14T16:27:17.289946" elapsed="0.000000">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:54:37.899972" elapsed="16.909979"/>
 </test>
-<status status="FAIL" start="2025-02-14T16:27:17.248934" elapsed="0.047300">Parent suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="FAIL" start="2025-02-14T20:52:51.553513" elapsed="123.256438"/>
 </suite>
 <kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
 <kw name="User ${USER} Logs Out The Shop" owner="ShopLibrary" source_name="User ${USER} Logs Out The Shop">
-<kw name="Save Selenium Screenshot" owner="ShopLibrary">
-<msg time="2025-02-14T16:27:17.314605" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
-<doc>Takes a screenshot with a unique filename to be stored in Robot Framework compiled reports.</doc>
-<status status="FAIL" start="2025-02-14T16:27:17.303106" elapsed="0.017459">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>css:span.user-button</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:54.903791" elapsed="0.031458"/>
 </kw>
-<msg time="2025-02-14T16:27:17.320565" level="WARN">Keyword 'Save Selenium Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
-<msg time="2025-02-14T16:27:17.320565" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
+<msg time="2025-02-14T20:54:54.935249" level="INFO">Clicking element 'css:span.user-button'.</msg>
+<kw name="Set Focus To Element" owner="ShopLibrary">
+<arg>//a[contains(text(),'Sign Out')]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T20:54:55.178633" elapsed="0.030560"/>
+</kw>
+<msg time="2025-02-14T20:54:55.209193" level="INFO">Clicking element '//a[contains(text(),'Sign Out')]'.</msg>
 <doc>This keyword is used for logging out of application</doc>
-<status status="FAIL" start="2025-02-14T16:27:17.303106" elapsed="0.025380">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:54:54.817161" elapsed="2.499657"/>
 </kw>
 <arg>User ${USER} Logs Out The Shop</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="FAIL" start="2025-02-14T16:27:17.303106" elapsed="0.025380">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="PASS" start="2025-02-14T20:54:54.817161" elapsed="2.499657"/>
 </kw>
-<status status="FAIL" start="2025-02-14T16:24:17.878708" elapsed="179.449778">Suite setup failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-
-
-Also suite teardown failed:
-NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</status>
+<status status="FAIL" start="2025-02-14T20:51:36.116382" elapsed="201.200436"/>
 </suite>
-<status status="FAIL" start="2025-02-14T16:24:17.848124" elapsed="179.488314"/>
+<status status="FAIL" start="2025-02-14T20:51:36.086957" elapsed="201.229861"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="8" skip="0">All Tests</stat>
+<stat pass="7" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="8" skip="0">All</stat>
-<stat pass="0" fail="2" skip="0">Leads</stat>
-<stat pass="0" fail="1" skip="0">newuser</stat>
-<stat pass="0" fail="2" skip="0">pages</stat>
-<stat pass="0" fail="2" skip="0">Quotes</stat>
-<stat pass="0" fail="1" skip="0">serviceOrder</stat>
-<stat pass="0" fail="8" skip="0">Test1</stat>
+<stat pass="7" fail="1" skip="0">All</stat>
+<stat pass="2" fail="0" skip="0">Leads</stat>
+<stat pass="1" fail="0" skip="0">newuser</stat>
+<stat pass="1" fail="1" skip="0">pages</stat>
+<stat pass="2" fail="0" skip="0">Quotes</stat>
+<stat pass="1" fail="0" skip="0">serviceOrder</stat>
+<stat pass="7" fail="1" skip="0">Test1</stat>
 </tag>
 <suite>
-<stat pass="0" fail="8" skip="0" id="s1" name="Shop project">Shop project</stat>
-<stat pass="0" fail="8" skip="0" id="s1-s1" name="Tests">Shop project.Tests</stat>
-<stat pass="0" fail="8" skip="0" id="s1-s1-s1" name="RegressionTest">Shop project.Tests.RegressionTest</stat>
+<stat pass="7" fail="1" skip="0" id="s1" name="Shop project">Shop project</stat>
+<stat pass="7" fail="1" skip="0" id="s1-s1" name="Tests">Shop project.Tests</stat>
+<stat pass="7" fail="1" skip="0" id="s1-s1-s1" name="RegressionTest">Shop project.Tests.RegressionTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-02-14T16:27:17.244595" level="WARN">Keyword 'Save Selenium Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
-<msg time="2025-02-14T16:27:17.320565" level="WARN">Keyword 'Save Selenium Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=133.0.6943.98)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7424DCC05+28741]
-	(No symbol) [0x00007FF74243FED0]
-	(No symbol) [0x00007FF7422D4FBA]
-	(No symbol) [0x00007FF7422AED55]
-	(No symbol) [0x00007FF742356DE7]
-	(No symbol) [0x00007FF74236F8B2]
-	(No symbol) [0x00007FF74234FBD3]
-	(No symbol) [0x00007FF742319F43]
-	(No symbol) [0x00007FF74231B2D1]
-	GetHandleVerifier [0x00007FF74280DE3D+3375741]
-	GetHandleVerifier [0x00007FF74282096A+3452330]
-	GetHandleVerifier [0x00007FF74281671D+3410781]
-	GetHandleVerifier [0x00007FF7425A653B+854395]
-	(No symbol) [0x00007FF74244BE0F]
-	(No symbol) [0x00007FF742447714]
-	(No symbol) [0x00007FF7424478AD]
-	(No symbol) [0x00007FF742436189]
-	BaseThreadInitThunk [0x00007FFB3758E8D7+23]
-	RtlUserThreadStart [0x00007FFB3845BF2C+44]
-</msg>
 </errors>
 </robot>

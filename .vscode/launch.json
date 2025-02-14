@@ -29,14 +29,20 @@
             "target": "."
         },
         {
-            "name": "RobotCode: Default",
-            "type": "robotcode",
+            "name": "Robot-lsp: Default",
+            "type": "robotframework-lsp",
             "request": "launch",
-            "purpose": "default",
-            "presentation": {
-                "hidden": true
-            },
-            "pythonConfiguration": "RobotCode: Python"
+            "cwd": "${workspaceFolder}",
+            "args": [
+                    "--variable", "BROWSER:CHROME", 
+                    "--variable", "PATH_TO_DRIVER:chromedriver.exe", 
+                    "--variable", "URL:https://shopstage.icewarp.com/login", 
+                    "--variable", "USERNAME:chandrakant.waingankar@icewarp.co.in", 
+                    "--variable", "PASSWORD:MIGA_2024", 
+                    "--variable", "USER:Chan",
+                    "--include", "ServiceOrder"
+                ],
+            "target": "."
         },
         {
             "name": "RobotCode: Python",

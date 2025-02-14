@@ -73,7 +73,9 @@ class Services(HomePage):
         **Example**
         | User chan selects discount for item SSL certificate as 5 % |
         """
+        
         self.wait_for_and_click_element(self.discount_box)
+        self.wait_until_element_is_visible("css: button[title='+ Add discount']")
         self.select_from_list_by_label(self.discount_item.format(item), discount+" %")
 
     @keyword("User ${USER} fills his company details on Service order")
