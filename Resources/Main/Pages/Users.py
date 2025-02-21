@@ -11,8 +11,7 @@ class Users(HomePage):
         self.roles = "//label[contains(.,'{}')]"
         self.permission = "//div[label[contains(text(), '{}')]]/descendant::label[contains(., '{}')]"
         self.create_button = "//button[text()='Create']"
-        self.success_alert= "css: div.alert-text ul li"
-        self.error_alert= "css: div.alert-text"
+        
 
 
     @keyword("User ${USER} uploads avatar image ${path_to_avatar_img}")
@@ -80,8 +79,32 @@ class Users(HomePage):
             self.element_text_should_be(self.success_alert,r"User \w+ successfully created.")
 
         except Exception as e:
-            ALerts_list = self.get_webelements(self.service_order_alert_text)
+            ALerts_list = self.get_webelements(self.error_alert)
             for alert_text in ALerts_list:
                 BuiltIn().log(alert_text.text)     
+
+
+    @keyword("User ${USER} searches the Users by ${filter_name} as ${value}")
+    def search_in_leads(self, USER=None, filter_name=None, value=None):
+        """ This keyword is used to search desired record using filter Name/email/position 
+
+            **Arguments**
+            - filter_name: name | email | position
+            - value: String 
+
+            **Example**
+            | User chan searches the Users by name as Marco Polo |
+            | User Chan searches the Users by email as tester@gemail.com |
+        """
+        self.wait_until_element_is_visible(self.filter_textbox.format(filter_name.lower()))
+        self.clear_element_text(self.filter_textbox.format(filter_name.lower()))
+        self.wait_for_and_input_text(self.filter_textbox.format(filter_name.lower()), value)
+        self.wait_for_and_click_element(self.search_button)
+        self.wait_until_element_is_visible("//table[contains(@class, 'leads-table')]//tbody//tr//td", timeout=10)
+        list_of_leads = []
+        for element in self.get_webelements("//table[contains(@class, 'leads-table')]//tbody//tr//td"):
+            list_of_leads.append(element.text)
+
+        BuiltIn().should_contain(list_of_leads, value, f"The {value} is not present in Leads")
 
     

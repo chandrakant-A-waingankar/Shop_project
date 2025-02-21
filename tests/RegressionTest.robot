@@ -2,6 +2,7 @@
 Resource    ../Resources/HolyGrail.robot
 Test Tags    All
 
+
 *** Test Cases ***
 TC-01 Create New Cloud Quote 
     [Documentation]   To verify that a user can create a new cloud quote successfully
@@ -105,6 +106,32 @@ TC-08 Create new User
     User ${USER} Assigns The Role Admin To The New User
     User ${USER} Assigns Permission For Clouds To Overview
     User ${USER} Submits The New User Data
+
+TC-09 check whether desired record is present in Leads or not
+    [Documentation]    To verify that whether desired record is present in Leads or not
+    [Tags]    leadSearch
+    User ${USER} Opens Page Overview Under Leads Dropdown From Left Menu
+    User ${USER} Searches the leads By company As Preferr
+    User ${USER} Searches the leads By company As cgnfgn
+
+
+TC-10 Create new Partner
+    [Documentation]    To verify that user is able to create new partner
+    [Tags]    Partner
+    User ${USER} Opens Page New Under Partners Dropdown From Left Menu
+    User ${USER} Verifies The Create New Partner Page
+    User ${USER} Fills In The New Partner Data
+    User ${USER} submits the new partner data
+
+
+TC-11 User deletes a specific lead
+    [Documentation]    To verify that user is able to delete a specific lead
+    [Tags]    deleteLeads
+    User ${USER} Opens Page Overview Under Leads Dropdown From Left Menu
+    User ${USER} Searches The Leads By company As ABC
+    User ${USER} Selects The Displayed Record(s) In Leads
+    User ${USER} Deletes The Selected Records In Leads
+
 
 
 

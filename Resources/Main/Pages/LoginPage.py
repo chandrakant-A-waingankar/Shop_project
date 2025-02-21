@@ -14,6 +14,8 @@ class LoginPage(Base):
     @keyword("User ${USER} logs in to the Shop")
     def login(self, user):
         self.wait_until_element_is_visible(self.login_area,timeout=300)
+        self.clear_element_text('id:email')
+        self.clear_element_text('id:password')
         self.input_text('id:email', BuiltIn().get_variable_value('${USERNAME}'))
         self.input_text('id:password', BuiltIn().get_variable_value('${PASSWORD}'))
         self.wait_for_and_click_element("//button[contains(text(),'Sign In')]")

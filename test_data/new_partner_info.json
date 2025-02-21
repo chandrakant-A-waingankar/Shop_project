@@ -1,0 +1,36 @@
+{
+    "Basics": {
+                    "Type": "Distributor",
+                    "Parent Partner": "Apptocloud",
+                    "Name": "Test_Partner",
+                    "Company": "Test_Company",
+                    "Website": "Test_website",
+                    "Country": "Albania",
+                    "Business Countries": "Albania",
+                    "Status": "Active",
+                    "Plan Quotes": "Active"
+
+                },
+    "Vendor pricelists": {"On-premises": "Partner - 50% - US (USD)"},
+
+    "Price margins": {
+                        "Cloud margin" : "1",
+                        "Cloud vendor margin" : "2",
+                        "Saas margin" : "3"
+                        },
+
+    "Billing details": {
+
+                            "First name": "TestFirstName",
+                            "Last name": "TestLastName",
+                            "Company": "Test_Company",
+                            "Address": "Test_Address", 
+                            "City": "Test_City", 
+                            "Zip": "", 
+                            "Country": "Albania",
+                            "Email": "test_user@gemail.com", 
+                            "Phone": "+", 
+                            "VAT ID": "VATID_"
+
+                        }
+}

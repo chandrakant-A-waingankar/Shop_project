@@ -19,6 +19,8 @@ class Lead(HomePage):
         self.select_a_field_button = "css: button[title='Select a Field']"
         self._field_input_textbox = ""
         self.fields_container = "css: div#fields-container>div"
+        #self.filter_textbox = "css: input[name={}]"
+        #self.search_button = "//button[text()='Search']"
 
     @keyword("User ${USER} creates new Lead")
     def create_new_lead(self, user):
@@ -93,6 +95,45 @@ class Lead(HomePage):
             Alert_list = self.get_webelements("css: div.alert-text ul li")
             for alert_text in Alert_list:
                 BuiltIn().log(alert_text.text)
+
+    @keyword("User ${USER} searches the leads by ${filter_name} as ${value}")
+    def search_in_leads(self, USER=None, filter_name=None, value=None):
+        """ This keyword is used to search desired record using filter company/email 
+
+            **Arguments**
+            - filter_name: company | email
+            - value: String 
+
+            **Example**
+            | User chan searches the leads by company as United Computer pvt ltd. |
+            | User Chan searches the leads by email as tester@gemail.com |
+        """
+        self.wait_until_element_is_visible(self.filter_textbox.format(filter_name.lower()))
+        self.clear_element_text(self.filter_textbox.format(filter_name.lower()))
+        self.wait_for_and_input_text(self.filter_textbox.format(filter_name.lower()), value)
+        self.wait_for_and_click_element(self.search_button)
+        self.wait_until_element_is_visible("//table[contains(@class, 'leads-table')]//tbody//tr//td", timeout=10)
+        list_of_leads = []
+        for element in self.get_webelements("//table[contains(@class, 'leads-table')]//tbody//tr//td"):
+            list_of_leads.append(element.text)
+
+        BuiltIn().should_contain(list_of_leads, value, f"The {value} is not present in Leads")
+
+
+    @keyword("User ${USER} selects the displayed record(s) in leads")
+    def select_displayed_records_in_leads(self, user):
+        """ This keyword selects all the displayed records
+        """
+        
+        self.execute_javascript("document.querySelector({}).click();".format(self.select_all_checkbox))
+
+    @keyword("User ${USER} deletes the selected records in leads")
+    def delete_selected_records_in_leads(self, user):
+        """ This keyword is used to delete the selected records
+        """
+        self.wait_for_and_click_element(self.manage_button)
+        self.wait_for_and_click_element("link: Delete")
+
         
         
 

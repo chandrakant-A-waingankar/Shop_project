@@ -39,7 +39,6 @@ class HomePage(Base):
         self.element_should_be_visible(self.user_button)
         self.element_should_be_visible(self.manual_reviews_info_area)
 
-
     @keyword("User ${USER} Logs out the Shop")
     def logout(self, user):
         """ This keyword is used for logging out of application
@@ -48,25 +47,6 @@ class HomePage(Base):
         self.wait_until_element_is_visible(self.user_btn_dropdown)
         self.wait_for_and_click_element(self.sign_out)
         self.wait_until_element_is_not_visible(self.shop_logo)
-
-    def select_new_option(self, option):
-        self.wait_for_and_click_element(self.new_button)
-        if option.lower() == "cloud":
-            self.wait_for_and_click_element(self.new_option.format("Cloud"))
-        elif option.lower() == "saas":
-            self.wait_for_and_click_element(self.new_option.format("SaaS"))
-        elif option.lower() == "leads":
-            self.wait_for_and_click_element(self.new_option.format("Leads"))
-        else:
-            print("Option not supported, Please select valid option")
-
-
-    def open_left_menu(self):
-        """
-        This function is used to open the left Menu 
-        """
-        self.wait_for_and_click_element(self.menu_button)
-        self.wait_until_element_is_visible(self.left_menu_panel)
 
     @keyword("User ${USER} Opens ${page_name} Page from left menu")
     def open_page_from_leftmenu(self,user, page_name):
@@ -109,3 +89,21 @@ class HomePage(Base):
             self.wait_for_and_click_element(self.page_link_under_dropdown.format(dropdown,page_name))
         else:
             BuiltIn().log("Please refer another keyword \"User $user Opens page $Leads from left menu\"")
+
+    def select_new_option(self, option):
+        self.wait_for_and_click_element(self.new_button)
+        if option.lower() == "cloud":
+            self.wait_for_and_click_element(self.new_option.format("Cloud"))
+        elif option.lower() == "saas":
+            self.wait_for_and_click_element(self.new_option.format("SaaS"))
+        elif option.lower() == "leads":
+            self.wait_for_and_click_element(self.new_option.format("Leads"))
+        else:
+            print("Option not supported, Please select valid option")
+
+    def open_left_menu(self):
+        """
+        This function is used to open the left Menu 
+        """
+        self.wait_for_and_click_element(self.menu_button)
+        self.wait_until_element_is_visible(self.left_menu_panel)
