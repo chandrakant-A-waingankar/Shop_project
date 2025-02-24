@@ -11,7 +11,9 @@ class Partners(HomePage):
         self.toggle_button= "//div[@class='form-group row' and contains(.,'{}')]//label[contains(.,'{}')]"
         self.dropdown_box= "//div[contains(@class, 'col-md-8') and contains(.,'{}')]/following-sibling::div[1]//select[contains(@title,'{}')]"
         self.input_box = "//div[contains(@class, 'col-md-8') and contains(.,'{}')]/following-sibling::div[1]//input[@placeholder='{}']"
-        
+        self.deactivate_button= "//a[text()=' Deactivate']"
+        self.actions_button= "//button[contains(.,'Actions')]"
+        self.partner_name= "//a[text()='{}']"
 
     @keyword("User ${USER} verifies the create new partner page")
     def verify_create_new_partner_page(self, user):
@@ -54,4 +56,42 @@ class Partners(HomePage):
                 BuiltIn().log(alert_text.text)
         
 
-        
+    @keyword("User ${USER} deactivates partner with name ${ptnr_name}")
+    def _delete_partner(self, user, ptnr_name):
+        """
+            This keyword is ued to deactivate a specific partner.
+
+            **Arguments**
+            - ptnr_name: (str) 
+
+            **Example**
+            | User chan deactivates partner with name Mumbai Technologies |
+        """
+        self.wait_for_and_click_element(self.partner_name.format(ptnr_name))
+        self.wait_for_and_click_element(self.actions_button)
+        self.wait_for_and_click_element(self.deactivate_button)
+
+
+    @keyword("User ${USER} searches for partner with ${filter} having value ${value}")
+    def search_partner(self, user, filter, value):
+        """
+            This keyword is used to search partner using filters name /partner_id of the partner
+
+            **Arguments**
+            - filter: (str)   options- name | partner_id
+            - value: (str)
+
+            **Example**
+            | User chan searches for partner with name having value Mumbai Technologies |
+            | User chan searches foe partner with partner_id having value 212145 |
+        """
+        self.wait_until_element_is_visible(self.filter_textbox.format(filter))
+        self.clear_element_text(self.filter_textbox.format(filter))
+        self.wait_for_and_input_text(self.filter_textbox.format(filter), value)
+        self.wait_for_and_click_element(self.search_button)
+        self.wait_until_element_is_visible("//table[contains(@class, 'viki-table-partners')]//tbody//tr//td", timeout=10)
+        list_of_leads = []
+        for element in self.get_webelements("//table[contains(@class, 'viki-table-partners')]//tbody//tr//td"):
+            list_of_leads.append(element.text)
+
+        BuiltIn().should_contain(list_of_leads, value, f"The {value} is not present in Partners")

@@ -132,6 +132,16 @@ TC-11 User deletes a specific lead
     User ${USER} Selects The Displayed Record(s) In Leads
     User ${USER} Deletes The Selected Records In Leads
 
+Tc-12 Deactivate any partner
+    [Documentation]    To verify that user is able to deactivate any partner
+    [Tags]    deactivatepartner
+    User ${USER} Opens Page Overview Under Partners Dropdown From Left Menu
+    User ${USER} Searches For Partner With name Having Value ACADEMYTECH
+    User ${USER} Deactivates Partner With Name ACADEMYTECH
+
+
+
+
 
 
 
